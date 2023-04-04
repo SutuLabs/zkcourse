@@ -26,7 +26,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/sutulabs/zkcourse' }
+      { icon: 'github', link: 'https://github.com/SutuLabs/zkcourse' }
     ]
   }
 })
