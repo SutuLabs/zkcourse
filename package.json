@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "serve": "npm run serve:docs",
+    "serve:docs": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview:docs": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.64"
+  }
+}
