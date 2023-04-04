@@ -27,14 +27,21 @@ lessons:
 ---
 
 <script setup>
-import { ref } from 'vue'
+import { useData } from 'vitepress'
+import { isProxy, toRaw } from 'vue';
 
-const i = ref(-1)
+const { frontmatter } = useData()
+const lessons = toRaw(frontmatter.value).lessons
+
+function getTitle(number) {
+    return `第 ${number} 课【${ lessons[number - 1].date }】 ${ lessons[number - 1]?.name }`;
+}
+
 </script>
 
 # 课程表  
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(1) }}
 
 在第一次课程中，我们将了解现在的零知识技术及应用。在课上我们将会讨论为什么零知识最近会成为一个令人兴奋的话题，以及为什么我们认为它有可能成为未来十年最大的技术故事之一
 
@@ -42,7 +49,7 @@ const i = ref(-1)
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(2) }}
 
 _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，因此推迟_
 
@@ -50,62 +57,62 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(3) }}
 
 我们将讨论现代证明系统的一些"基础构件"，包括：零知识的形式化，离散对数和其他常见的密码学难度来源，椭圆曲线密码学，和双线性映射密码学。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(4) }}
 _由于5月6日是五一放假调休补上班的日子，所以往后推到周日_
 
 在 "Circom 1" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(5) }}
 
 我们将在 "数学基础构件" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(6) }}
 
 我们将讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)； 快速椭圆曲线翻倍加运算。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(7) }}
 
 我们讨论了算术化的几个例子：ZK程序的中间表示（IR），以及可以被证明系统使用的算术电路。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(8) }}
 
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。我们还将从多项式恒等式讨论像 LOOKUP 这样的证明。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(9) }}
 
 基于前四节的学习，我们将概述 zkSNARK 协议的前景，并建立证明系统的分类。我们还将讨论证明系统递归和组合。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(10) }}
 
 我们将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(11) }}
 
 我们将讨论 zkSNARK 的其他用途：非完整信息游戏、加密数据市场、ZKML、ZKVM、递归 ZK 证明等。
 :::
 
 
-::: details 第 {{ (++i) + 1 }} 课【{{ $frontmatter.lessons[i].date }}】 {{ $frontmatter.lessons[i].name }}
+::: details {{ getTitle(12) }}
 
 在最后一节课中，学员和导师将展示他们开发的项目和 ZK 应用程序！
 :::
