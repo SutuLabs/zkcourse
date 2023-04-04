@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>交互式零知识三色问题演示</title>
+    <script language="javascript" type="application/javascript" src="graph.js"></script>
+  </head>
+  <body onload="init()" style="font-family: Verdana">
+    <table id="controls" style="margin-left: auto; margin-right: auto; width: 600px">
+      <tr>
+        <td colspan="3">
+          <h1>交互式零知识三色问题演示</h1>
+          <p>
+            这是针对三色图的<a href="http://en.wikipedia.org/wiki/Zero-knowledge_proof">零知识证明协议</a>的交互式演示。
+            零知识证明可以让<em>验证者</em>相信一个事实的真实性（即，一个图仅三色），而无需揭示图的具体颜色。
+          </p>
+          <p>
+            此应用程序允许您以验证者的身份玩游戏。
+            该应用程序（证明者）为您提供了一个图形，其颜色对您来说是隐藏的，并且您可以选择一条边，验证器将显示其颜色。
+            选择一个图并尝试点击一些边。
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td id="main" colspan="3" style="height: 400px">
+          <svg xmlns="http://www.w3.org/2000/svg" style="height: 380px; width: 600px">
+            <defs>
+              <marker
+                id="Triangle"
+                viewBox="0 0 10 10"
+                refX="0"
+                refY="5"
+                markerUnits="strokeWidth"
+                markerWidth="4"
+                markerHeight="3"
+                orient="auto"
+              >
+                <path d="M 0 0 L 10 5 L 0 10 z" />
+              </marker>
+            </defs>
+            <text dx="400" dy="200">选择一个图开始</text>
+            <path d="M 310 200 L 400 280" fill="none" stroke="black" stroke-width="30" marker-end="url(#Triangle)" />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" value="揭露" id="reveal" />
+          <label for="turbo">自动:</label> <input type="checkbox" id="turbo" />
+        </td>
+        <td style="text-align: center">置信度: <span id="confidence">0</span>%</td>
+        <td style="text-align: right">
+          <input type="submit" value="图 1" id="honest" onclick="setup('honest')" />
+          <input type="submit" value="图 2" id="tricky" onclick="setup('tricky')" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="padding-top: 2em">
+          <p>
+            您可能会注意到游戏的不同轮次之间颜色会发生变化；
+            尽管证明者一旦为您提供选择就不允许改变主意，但允许混合选择之间的颜色。
+            事实上，如果没有，您可以对整个着色进行逆向工程（使其不是零知识证明）您可以通过按
+            <em>揭露</em> 按钮检查应用程序是否违背其承诺 . （既然这告诉你真正的颜色是什么，这显然不是零知识协议的一部分！）
+          </p>
+          <p>
+            一旦厌倦了手动单击边，您可以选择 自动 来加快速度。
+            当你进行了更多轮的协议时，证明者由于幸运而说谎（图不是三色）概率在下降，这也反映在置信度指标中。
+          </p>
+          <p><em>练习 1：</em> 目前，您只能选择相邻的节点对进行检查。 如果您可以选择任意节点对来检查，证明仍然是零知识吗？</p>
+          <p>
+            <em>练习 2：</em> 当前用于置信度的方程是 <code>1-(1/E)^n</code>，其中 <code>E</code> 是图中的边，<code>n</code>
+            是运行试验的次数。 这是正确的等式吗？ 为什么没有先验？
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
