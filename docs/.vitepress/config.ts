@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ZK Shanghai 2023",
   description: "A course site for ZK Shanghai 2023",
-  base: "/zkcourse/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
