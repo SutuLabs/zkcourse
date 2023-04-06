@@ -1,6 +1,6 @@
 ---
 lessons:
-  - name: ZK引言
+  - name: 初识零知识
     date: 4月8日周六
   - name: Circom 1
     date: 4月22日周六
