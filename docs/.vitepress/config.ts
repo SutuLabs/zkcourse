@@ -1,4 +1,21 @@
 import { defineConfig } from 'vitepress'
+import mathjax3 from 'markdown-it-mathjax3';
+
+const customElements = [
+  'mjx-container', 'mjx-assistive-mml', 'math', 'maction', 'maligngroup',
+  'malignmark', 'menclose', 'merror', 'mfenced', 'mfrac', 'mi', 'mlongdiv',
+  'mmultiscripts', 'mn', 'mo', 'mover', 'mpadded', 'mphantom', 'mroot', 'mrow',
+  'ms', 'mscarries', 'mscarry', 'mscarries', 'msgroup', 'mstack', 'mlongdiv',
+  'msline', 'mstack', 'mspace', 'msqrt', 'msrow', 'mstack', 'mstack', 'mstyle',
+  'msub', 'msup', 'msubsup', 'mtable', 'mtd', 'mtext', 'mtr', 'munder',
+  'munderover', 'semantics', 'math', 'mi', 'mn', 'mo', 'ms', 'mspace', 'mtext',
+  'menclose', 'merror', 'mfenced', 'mfrac', 'mpadded', 'mphantom', 'mroot',
+  'mrow', 'msqrt', 'mstyle', 'mmultiscripts', 'mover', 'mprescripts', 'msub',
+  'msubsup', 'msup', 'munder', 'munderover', 'none', 'maligngroup',
+  'malignmark', 'mtable', 'mtd', 'mtr', 'mlongdiv', 'mscarries', 'mscarry',
+  'msgroup', 'msline', 'msrow', 'mstack', 'maction', 'semantics', 'annotation',
+  'annotation-xml',
+];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -21,11 +38,40 @@ export default defineConfig({
           // { text: 'Honor Roll', link: '/honor' },
           { text: '引用材料', link: '/reference' },
         ]
+      },
+      {
+        text: '数学知识',
+        link: '/math/index',
+        collapsed: false,
+        items: [
+          { text: '群论', link: '/math/group-theory' },
+          { text: '离散对数', link: '/math/discrete-logarithm' },
+          { text: '随机函数', link: '/math/random' },
+          { text: '乘法逆元', link: '/math/inverse' },
+        ]
       }
     ],
+
+    editLink: {
+      pattern: 'https://github.com/SutuLabs/zkcourse/edit/main/docs/:path',
+      text: '在GitHub编辑本页面'
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/SutuLabs/zkcourse' }
     ]
-  }
+  },
+
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3);
+    },
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag),
+      },
+    },
+  },
 })
