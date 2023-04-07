@@ -35,6 +35,7 @@ export default defineConfig({
           { text: '基本信息', link: '/information' },
           { text: '课程表', link: '/syllabus' },
           { text: '课程项目', link: '/project' },
+          { text: '学员列表', link: '/roster' },
           // { text: 'Honor Roll', link: '/honor' },
           { text: '引用材料', link: '/reference' },
         ]
