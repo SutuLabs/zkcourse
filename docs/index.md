@@ -8,11 +8,11 @@ hero:
   tagline: 线上、线下同步进行
   actions:
     - theme: brand
+      text: 学习
+      link: /syllabus
+    - theme: alt
       text: 报名
       link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g
-    - theme: alt
-      text: 信息
-      link: /information
 
 features:
   - title: 支撑数学知识
