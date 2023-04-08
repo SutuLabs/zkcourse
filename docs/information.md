@@ -18,10 +18,11 @@
 
 **链接**：待定
 
-**线上答疑**: [Discord](https://discord.gg/FCQwx7T5qd)
+**线上答疑**: [Github Discussion](https://github.com/SutuLabs/zkcourse/discussions)
 
 **视频回放免责声明**：部分课堂活动将进行录制。这些回放可能会在其他课程中重复使用，供其他学生查看，或用于其他教育和研究目的。 如果您有任何疑问，请联系教学团队的成员。
 
+**分组安排**：[此处](https://docs.google.com/spreadsheets/d/1fCl3wToU6M0pozyXiq5QXK6V1eCic5BaiMFkmSKcDlA/edit#gid=0)
 
 ## 前置数学知识
 
