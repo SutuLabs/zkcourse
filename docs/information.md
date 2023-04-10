@@ -24,6 +24,8 @@
 
 **分组安排**：[此处](https://docs.google.com/spreadsheets/d/1fCl3wToU6M0pozyXiq5QXK6V1eCic5BaiMFkmSKcDlA/edit#gid=0)
 
+**作业模版**：[此处](https://github.com/SutuLabs/zkcourse-homework)
+
 ## 前置数学知识
 
 对于第 5 课到第 9 课（涵盖 ZK 证明堆栈的构造）需要对前置数学知识有一定程度的了解。如果没有适当的背景水平，这门课程将很难跟上。
