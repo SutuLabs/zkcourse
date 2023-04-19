@@ -50,6 +50,15 @@ export default defineConfig({
           { text: '随机函数', link: '/math/random' },
           { text: '乘法逆元', link: '/math/inverse' },
         ]
+      },
+      {
+        text: 'zkDapps参考',
+        link: '/dapp/index',
+        collapsed: false,
+        items: [
+          { text: 'zkSync', link: '/dapp/zksync' },
+          { text: 'halo2', link: '/dapp/halo2' },
+        ]
       }
     ],
 
