@@ -31,6 +31,10 @@
 
 有关详细信息，请参阅练习！
 
+### Dark Forest
+
+想要在本地执行单机的玩起来？请参考 [此处](https://github.com/projectsophon/darkforest-local)
+
 ## 其他资源
 
 我们还推荐 Dan Boneh 关于 zkSNARKs 的 [CS 251 讲座](https://cs251.stanford.edu/syllabus.html)（第 14 和 15 课）。
