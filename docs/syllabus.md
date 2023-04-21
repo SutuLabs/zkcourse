@@ -61,6 +61,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 本节课将会讨论实用的zkSNARK电路工程方法：使用工具如(circom/snarkjs/zkREPL) 为 groth16 zkSNARK 协议构建简单的零知识证明。我们将讨论 R1CS 编程模型（和成本模型）和简单的电路组件，例如位运算符、范围检查等。
 
 - 课前预习：[Circom 2 Doc](https://docs.circom.io/)
+- 课堂练习：[exercise-1](./notes/classexercise2)
 - [课后作业](./notes/exercise2)
 - 补充材料：[补充讲义](./notes/lecture2)
 :::
