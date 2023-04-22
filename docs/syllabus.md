@@ -2,11 +2,11 @@
 lessons:
   - name: 初识零知识
     date: 4月8日周六
-  - name: Circom 1
+  - name: CIRCOM基础电路
     date: 4月22日周六
   - name: 数学基础构件
     date: 4月29日周六
-  - name: Circom 2
+  - name: CIRCOM实用电路
     date: 5月7日周日
   - name: 承诺方案
     date: 5月13日周六
@@ -61,9 +61,10 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 本节课将会讨论实用的zkSNARK电路工程方法：使用工具如(circom/snarkjs/zkREPL) 为 groth16 zkSNARK 协议构建简单的零知识证明。我们将讨论 R1CS 编程模型（和成本模型）和简单的电路组件，例如位运算符、范围检查等。
 
 - 课前预习：[Circom 2 Doc](https://docs.circom.io/)
-- 课堂练习：[exercise-1](./notes/classexercise2)
+- 课堂练习：[exercise](./notes/classexercise2)
 - [课后作业](./notes/exercise2)
 - 补充材料：[补充讲义](./notes/lecture2)
+- 补充材料：[Num2Bit](./notes/num2bit)
 :::
 
 
@@ -76,13 +77,13 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 ::: details {{ getTitle(4) }}
 _由于5月6日是五一放假调休补上班的日子，所以往后推到周日_
 
-在 "Circom 1" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
+在 "{{lessons[1]?.name}}" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
 :::
 
 
 ::: details {{ getTitle(5) }}
 
-我们将在 "数学基础构件" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
+我们将在 ""{{lessons[2]?.name}}" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
 :::
 
 
