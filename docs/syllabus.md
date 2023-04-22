@@ -62,6 +62,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 
 - 课前预习：[Circom 2 Doc](https://docs.circom.io/)
 - 课堂练习：[exercise](./notes/classexercise2)
+- [课堂幻灯片](pathname:///lecture/2-circom1.pdf)
 - [课后作业](./notes/exercise2)
 - 补充材料：[补充讲义](./notes/lecture2)
 - 补充材料：[Num2Bit](./notes/num2bit)
