@@ -62,6 +62,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 
 - 课前预习：[Circom 2 Doc](https://docs.circom.io/)
 - 课堂练习：[exercise](./notes/classexercise2)
+- [课程回放](https://www.youtube.com/watch?v=CTJ1JkYLiyw)
 - [课堂幻灯片](pathname:///lecture/2-circom1.pdf)
 - [课后作业](./notes/exercise2)
 - 补充材料：[补充讲义](./notes/lecture2)
@@ -69,10 +70,20 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 :::
 
 
-::: details {{ getTitle(3) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(3) }}</summary>
+<!-- ::: details {{ getTitle(3) }} -->
 
 我们将讨论现代证明系统的一些"基础构件"，包括：零知识的形式化，离散对数和其他常见的密码学难度来源，椭圆曲线密码学，和双线性映射密码学。
-:::
+
+- 课前预习：[ZKP from Boaz Barak's book](https://intensecrypto.org/public/lec_14_zero_knowledge.html)
+  | [PDF版本](https://files.boazbarak.org/crypto/lec_14_zero_knowledge.pdf)
+<!-- - [课程回放](https://www.youtube.com/watch?v=CTJ1JkYLiyw) -->
+<!-- - [课堂幻灯片](pathname:///lecture/2-circom1.pdf) -->
+- [课后作业](./notes/exercise3)
+- 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf)
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(4) }}
