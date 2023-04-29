@@ -46,6 +46,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '计算理论基础', link: '/math/computation' },
+          { text: '困难问题', link: '/math/dlp' },
           { text: '群论', link: '/math/group-theory' },
           { text: '离散对数', link: '/math/discrete-logarithm' },
           { text: '随机函数', link: '/math/random' },
