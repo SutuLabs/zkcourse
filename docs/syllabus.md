@@ -79,7 +79,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 - 课前预习：[ZKP from Boaz Barak's book](https://intensecrypto.org/public/lec_14_zero_knowledge.html)
   | [PDF版本](https://files.boazbarak.org/crypto/lec_14_zero_knowledge.pdf)
 <!-- - [课程回放](https://www.youtube.com/watch?v=CTJ1JkYLiyw) -->
-<!-- - [课堂幻灯片](pathname:///lecture/2-circom1.pdf) -->
+- [课堂幻灯片](pathname:///lecture/3-math.pdf)
 - [课后作业](./notes/exercise3)
 - 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf)
 <!-- ::: -->
