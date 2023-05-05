@@ -37,10 +37,10 @@ $3^5 = (3^4)\times3 \equiv 4\times 3 = 12 \equiv 5\: (\mathrm{mod} \: 7)$
 
 一个和DLP问题相关的问题是由Whit Diffie和Martin Hellman提出的两方协商密钥在公共信道上不会被窃取的问题:
 
-*   Alice和Bob共同确定使用的循环群$G$,和生成器$q$
-*   Alice选择一个随机的密钥整数$a$,Bob选择了一个随机的整数$b$
-*   Alice计算$g^a$在公共信道上发送给Bob,同时Bob也计算出$g^b$在公共信道上发送给Alice.
-*   Alice和Bob都计算$g^{ab}=(g^a)^b=(g^b)^a$通过知道他们自己的随机的整数,这个生成的就是他们协商的密钥.
+- Alice和Bob共同确定使用的循环群$G$,和生成器$q$
+- Alice选择一个随机的密钥整数$a$,Bob选择了一个随机的整数$b$
+- Alice计算$g^a$在公共信道上发送给Bob,同时Bob也计算出$g^b$在公共信道上发送给Alice.
+- Alice和Bob都计算$g^{ab}=(g^a)^b=(g^b)^a$通过知道他们自己的随机的整数,这个生成的就是他们协商的密钥.
 
 现在$g^{ab}$是一个密钥能被用于Alice和Bob之间的对称加密.但是有一些人窃听了他们之间的交换获得了$G,g,g^a,g^b$.因此密钥取决于的这个问题,就叫做 计算DH问题(CDH).
 
