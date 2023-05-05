@@ -61,6 +61,13 @@ export default defineConfig({
           { text: 'zkSync', link: '/dapp/zksync' },
           { text: 'halo2', link: '/dapp/halo2' },
         ]
+      },
+      {
+        text: '其他资源',
+        collapsed: false,
+        items: [
+          { text: 'Hackathon', link: '/other/hackathon' },
+        ]
       }
     ],
 
