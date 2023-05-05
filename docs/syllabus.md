@@ -86,11 +86,23 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 </details>
 
 
-::: details {{ getTitle(4) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(4) }}</summary>
+<!-- ::: details {{ getTitle(4) }} -->
 _由于5月6日是五一放假调休补上班的日子，所以往后推到周日_
 
 在 "{{lessons[1]?.name}}" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
-:::
+
+<!-- - 课前预习：[ZKP from Boaz Barak's book](https://intensecrypto.org/public/lec_14_zero_knowledge.html)
+  | [PDF版本](https://files.boazbarak.org/crypto/lec_14_zero_knowledge.pdf) -->
+<!-- - [课程回放](https://www.youtube.com/watch?v=Rfs4n4MrQso) -->
+<!-- - [课堂幻灯片](pathname:///lecture/3-math.pdf) -->
+- [课后作业](./notes/exercise4)
+- 补充材料：[snarkjs资源](./notes/snarkjs)
+- 补充材料：[补充讲义](./notes/lecture4)
+<!-- - 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf) -->
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(5) }}
