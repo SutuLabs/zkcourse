@@ -97,7 +97,7 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 <!-- - [课堂幻灯片](pathname:///lecture/3-math.pdf) -->
 - [课后作业](./notes/exercise4)
 - 补充材料：[snarkjs资源](./notes/snarkjs)
-- 补充材料：[补充讲义](./notes/lecture4)
+<!-- - 补充材料：[补充讲义](./notes/lecture4) -->
 <!-- - 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf) -->
 <!-- ::: -->
 </details>
