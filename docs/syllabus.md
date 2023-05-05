@@ -70,9 +70,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(3) }}</summary>
-<!-- ::: details {{ getTitle(3) }} -->
+::: details {{ getTitle(3) }}
 
 我们将讨论现代证明系统的一些"基础构件"，包括：零知识的形式化，离散对数和其他常见的密码学难度来源，椭圆曲线密码学，和双线性映射密码学。
 
@@ -82,13 +80,13 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 - [课堂幻灯片](pathname:///lecture/3-math.pdf)
 - [课后作业](./notes/exercise3)
 - 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf)
-<!-- ::: -->
-</details>
+:::
 
 
 <details class="details custom-block" open="">
 <summary>{{ getTitle(4) }}</summary>
 <!-- ::: details {{ getTitle(4) }} -->
+
 _由于5月6日是五一放假调休补上班的日子，所以往后推到周日_
 
 在 "{{lessons[1]?.name}}" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
