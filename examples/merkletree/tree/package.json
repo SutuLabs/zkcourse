@@ -1,0 +1,7 @@
+{
+  "scripts": {},
+  "devDependencies": {
+    "circomlibjs": "^0.1.7",
+    "merkletreejs": "^0.3.10"
+  }
+}
