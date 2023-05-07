@@ -91,20 +91,23 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 
 在 "{{lessons[1]?.name}}" 的基础上，我们将编写和讨论更复杂的电路：包容证明验证、哈希函数、签名和加密验证。
 
-<!-- - [课程回放](https://www.youtube.com/watch?v=Rfs4n4MrQso) -->
-<!-- - [课堂幻灯片](pathname:///lecture/3-math.pdf) -->
+- [课程回放](https://www.youtube.com/watch?v=smJz5RdY0Nc)
+- [课堂幻灯片](pathname:///lecture/4-circom2.pdf)
 - [课后作业](./notes/exercise4)
 - 补充材料：[snarkjs资源](./notes/snarkjs)
 - 补充材料：[补充讲义](./notes/lecture4)
-<!-- - 补充材料：[Witness Indistinguishable Proofs and Constant Round Zero Knowledge](https://theory.cs.princeton.edu/uploads/Main/crypto_wi.pdf) -->
 <!-- ::: -->
 </details>
 
 
-::: details {{ getTitle(5) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(5) }}</summary>
+<!-- ::: details {{ getTitle(5) }} -->
 
 我们将在 ""{{lessons[2]?.name}}" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
-:::
+
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(6) }}
