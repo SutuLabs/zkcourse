@@ -70,6 +70,8 @@ template SecretToPublic() {
 
 对于 sk = 5, pk = 19065150524771031435284970883882288895168425523179566388456001105768498065277. 
 
+你也可以用[GO语言代码](https://github.com/iden3/go-iden3-crypto)生成一对，或者[在这里](https://www.poseidon-hash.info/)找一个熟悉的语言生成。
+
 ### Sign
 
 ```c
@@ -114,7 +116,7 @@ You need to verify the proof along with the public inputs of pk and m to verify 
 假设组 $G$ 中有 $n$ 个成员。 那么我们定义一个群签名方案为：
 
 * $KeyGen → (sk_i, pk_i)$：为组中的每个成员选择一组随机的秘密密钥 $sk_i$ 和相应的公钥 $pk_i$
-* $GroupSign(m, sk_i, G)$ → : 给定消息 $m$ 和密钥，输出组签名 $s$
+* $GroupSign(m, sk_i, G) → s$: 给定消息 $m$ 和密钥，输出组签名 $s$
 * $GroupVerify(m, s, G) → 1/0$：给定消息 $m$、组签名 $s$ 和组 $G$，验证签名是否来自组
 
 <details>
