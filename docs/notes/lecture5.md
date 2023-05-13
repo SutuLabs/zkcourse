@@ -294,9 +294,58 @@ b) the verifier $\mathcal{V}$ checks that root can be recovered by hashing $m_{i
 
 </details>
 
-### Polynomial commitment scheme
+### 多项式承诺方案
 
-A univariate polynomial commitment scheme is a commitment scheme for the message space $\mathbb{F} \leq d[X]$, the ring of univariate polynomials with maximum degree $d \in \mathbb{N}$ and coefficients in the field $\mathbb{F}=\mathbb{Z}_{p}$
+单变量多项式承诺方案是针对消息空间 $\mathbb{F}^{\leq d}[X]$ 的一种承诺方案，其中 $d \in \mathbb{N}$ 是最高次数，系数属于域 $\mathbb{F}=\mathbb{Z}_{p}$，表示单变量多项式的集合。
+
+它支持证明已承诺多项式在特定点上的正确评估的知识论证。在多项式中可以编码许多信息：我们将在第 7 讲 （“算术化”）和第 8 讲（“PlonK 和多项式恒等式”）中看到，任意关系都可以表示为一个多项式。
+
+KZG 承诺方案[6]。这在像 Sonic [7]、Marlin [3] 和 PlonK [4] 这样的协议中使用。（Marlin 和 PlonK 通过构建不同的多项式 IOP 对 Sonic 进行了改进）。
+
+::: tip 回忆：双线性映射密码学
+
+给定循环群 $\mathbb{G}_{1}, \mathbb{G}_{2}, \mathbb{G}_{T}$，所有的阶均为素数 $p$ ，其配对是一个非退化的双线性映射
+
+$$
+e: \mathbb{G}_{1} \times \mathbb{G}_{2} \rightarrow \mathbb{G}_{T}
+$$
+
+- 双线性: $e([a] P,[b] Q)=e(P, Q)^{a \cdot b}$
+
+- 非退化: 对于生成元 $G_{1} \in \mathbb{G}_{1}$ 和 $G_{2} \in \mathbb{G}_{2}$，$G_{T}:=e\left(G_{1}, G_{2}\right) \in \mathbb{G}_{T}$ 是一个生成元。
+
+:::
+
+在这个讲座中，我们将使用简写表示法 $[x]_{1}:=[x] G_{1},[x]_{2}:=[x] G_{2}$ 表示任何 $x \in \mathbb{F}_{p}$。
+
+- KZG.Setup $\left(1^{\lambda}, d\right) \rightarrow srs$: 设置 $srs =(\mathrm{ck}, \mathrm{vk})=\left(\left\{\left[\alpha^{i}\right]_{1}\right\}_{i=0}^{d-1},[\alpha]_{2}\right)$ . $\alpha$ 是一个秘密元素，必须在 Setup 后丢弃。
+
+- KZG.Commit $(\mathrm{ck} ; f(X)) \rightarrow C:$ 对于 $f(X)=\sum_{i=0}^{d-1} f_{i} X^{i}, C=\sum_{i=0}^{d-1}\left[f_{i}\right]\left[\alpha^{i}\right]_{1}=[f(\alpha)]_{1}$.
+
+- KZG.Open( srs, $C, x, y ; f(X)) \rightarrow\{ 0,1\}$ : 为了在评估点 $x$ 上打开对于声称值 $y$ 的承诺
+
+  - a) 证明者 $\mathcal{P}$ 计算商多项式 $q(X)=\frac{f(X)-y}{X-x}$ 并向验证者发送 $\pi=\mathrm{KZG} \cdot$ Commit $($ ck; $q(X))=[q(\alpha)]_{1}$
+
+  - b) 验证者 $\mathcal{V}$ 检查 $e\left(C-[y]_{1}, H\right) \stackrel{?}{=} e\left(\pi,[\alpha]_{2}-[x]_{2}\right)$.
+
+KZG.Open 中的 a) 和 b) 步骤经常被写成两个分开的算法：
+
+- Open $(\mathrm{ck}, C, x, y ; f(X)) \rightarrow \pi$：  返回关系的开放证明
+
+$$
+\mathcal{R}:=\left\{(\mathrm{ck}, C, x, y ; f(X)): \begin{array}{rl} 
+& C \operatorname{deg}(f(X)) \leq d \\
+& \wedge y=f(x)
+\end{array}\right\} ;
+$$
+
+- Verify $(\mathrm{vk}, C, x, y, \pi) \rightarrow\{0,1\}$:  验证开放证明的正确性。
+
+
+<details>
+<summary>英文原文</summary>
+
+A univariate polynomial commitment scheme is a commitment scheme for the message space $\mathbb{F}^{\leq d}[X]$, the ring of univariate polynomials with maximum degree $d \in \mathbb{N}$ and coefficients in the field $\mathbb{F}=\mathbb{Z}_{p}$
 
 It supports an argument of knowledge for proving the correct evaluation of a committed polynomial at a given point. A lot of information can be encoded in a polynomial: we will see in Lecture 7 ("Arithmetizations") and Lecture 8 ("PlonK and polynomial identities") how an arbitrary relation can be represented as a polynomial.
 
@@ -339,11 +388,38 @@ $$
 
 - Verify $(\mathrm{vk}, C, x, y, \pi) \rightarrow\{0,1\}$ verifies the opening proof's correctness. 
 
-## Additional resources
+</details>
+
+## 额外资源
+
+本笔记旨在作为承诺方案的高级介绍，并介绍它们在现代 SNARK 建设中的应用。以下是一些进一步了解和比较承诺方案的优秀资源：
+
+<details>
+<summary>英文原文</summary>
 
 This note hopes to serve as a high-level introduction to commitment schemes, and where they fit in the construction of modern SNARKs. Below are a few excellent resources for further understanding and comparing commitment schemes:
 
-### More polynomial commitments
+</details>
+
+### 更多的多项式承诺方案
+
+- 多项式承诺：通用 SNARK 的构建块 (Justin Drake)：基于使用的加密原语（哈希函数、配对群、未知阶群和离散对数群）对多项式承诺方案进行分类的结构分类。 （部分 $[1],[2]$ 和 $[3]$。
+
+- KZG 多项式承诺 (Dankrad Feist)：介绍了 KZG 多项式承诺方案，以及如何将其扩展到多证明和向量承诺。
+
+- 内积证明 (Dankrad Feist)：介绍内积证明 (IPA) 协议，一种可用于构建多项式承诺方案的原语。该 IPA 经常与向量 Pedersen 承诺方案一起实例化。
+
+- bulletproofs: :notes : inner_product_proof 有关 IPA 的出色介绍。
+
+- 一个 STARK 的解剖，Part 3：FRI (Alan Szepieniec): 介绍 FRI (Fast Reed-Solomon IOP of Proximity) 协议，用于近距离的预言机证明。STARK 多项式 IOP 使用 Merkle 树实例化 FRI。
+
+- 线性承诺工作在线性函数上。 （请注意，多项式承诺是线性承诺的一种特殊形式，因为 $p(X)=\sum p_{i} x^{i}$ 可以写为两个向量 $\left(p_{0}, \ldots, p_{d-1}\right)$ 和 $\left(1, x, \ldots, x^{d-1}\right)$ 的点积。）这些用于 Vortex（基于格的）、Brakedown 和 Orion 等构造。
+
+- 多线性承诺对多变量线性多项式进行操作。它们可用于实例化 SumCheck 协议，这是一个既不是零知识也不是对 NP 声明有效的交互证明 (IP)。使用多线性承诺方案的 zk-SNARKs 包括：Hyrax、Libra、Virgo 和 Spartan。
+
+
+<details>
+<summary>英文原文</summary>
 
 - polynomial commitments: building block for universal SNARKS (Justin Drake): includes a taxonomy of polynomial commitment schemes based on the cryptographic primitives used (hash functions, pairing group, unknown order group, and discrete log group). (Parts $[1],[2]$, and $[3]$.
 
@@ -359,8 +435,20 @@ This note hopes to serve as a high-level introduction to commitment schemes, and
 
 - Multilinear commitments work over multivariate linear polynomials. They can be used to instantiate the sumcheck protocol, an interactive proof (IP) which is by itself neither zeroknowledge nor succinct for NP statements. zk-SNARKs which use the sumcheck protocol with multilinear commitment schemes include: Hyrax, Libra, Virgo, and Spartan.
 
-### Implementations and benchmarks
+</details>
+
+### 实现和基准测试
+
+- arkworks-rs/poly-commit：一个 Rust 库，支持四种多项式承诺方案。
+
+- 多项式承诺基准测试 (Remco Bloemen)：基于 KZG、基于 IPA 和基于 FRI 的多项式承诺方案实现的 Commit 算法的基准测试。
+
+
+<details>
+<summary>英文原文</summary>
 
 - arkworks-rs/poly-commit: a Rust library supporting four polynomial commitment schemes.
 
 - Polynomial Commitment Benchmark (Remco Bloemen): benchmarks for the Commit algorithm in implementations of KZG, IPA-based, and FRI-based polynomial commitment schemes. 
+
+</details>
