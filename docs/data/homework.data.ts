@@ -59,7 +59,7 @@ lysiane
 lansane	
 净	
 DravenLu	https://github.com/Dispa1r/zkshanghai-workshop
-Akagi201	https://github.com/Akagi201/zkp-workshop-xxxx
+Akagi201	https://github.com/Akagi201/zkp-workshop
 	
 线上组team8	
 老九	https://github.com/lane2/zkshanghai-workshop
@@ -78,7 +78,7 @@ mrtree	https://github.com/mrttree/zkcourse-homework
 li cong	https://github.com/congli35/zkcourse-homework
 meepo lipeng	
 Dazsao	https://github.com/DessertHeart/zkshanghai-workshop
-扣扣仙贝	
+Jackie	https://github.com/Jackietan99/zkcourse-homework
 keep	https://github.com/readygo67/zkshanghai-workshop
 	
 线上组team10	
@@ -89,6 +89,23 @@ John wein	https://github.com/zliu265/zkshanghai-workshop
 SinTan	https://github.com/sintan1071/zkshanghai-workshop
 杨关旬	https://github.com/yangguanxun/zkshanghai-workshop
 A123	https://github.com/dcbd2e4038/zkshanghai-workshop
+虎	
+	
+线上组team11	
+白菜	
+Anonymous	
+17	
+梭哈艺术家	
+click	
+gss	
+kael	
+demian德米安	
+	
+线上组team12	
+shane	
+鱼丸	
+kp	
+diego	
 `;
 
 const members = memberStr

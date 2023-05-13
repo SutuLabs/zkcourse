@@ -35,7 +35,7 @@ script.value += `)`;
 
 SAMPLE=sample
 OUTPUT=homework.md
-MAXLECTURE=3
+MAXLECTURE=4
 
 {{script}}
 
@@ -64,7 +64,7 @@ done
 
 
 echo "**图示：**">>$OUTPUT
-echo "- ✅ 已收到">>$OUTPUT
+echo "- ☑️ 已收到">>$OUTPUT
 echo "- 🟡 未收到">>$OUTPUT
 echo "- 💤 尚未布置">>$OUTPUT
 echo "- 🔒 无法访问">>$OUTPUT
@@ -104,7 +104,7 @@ for repo in "${repos[@]}"; do
           if cmp --silent -- "$name/$filename" "$SAMPLE/$filename"; then
             echo -n " 🟡 |">>$OUTPUT
           else
-            echo -n " [✅]($repo/blob/main/$filename) |">>$OUTPUT
+            echo -n " [☑️]($repo/blob/main/$filename) |">>$OUTPUT
           fi
         fi
       else
