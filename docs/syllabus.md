@@ -83,9 +83,7 @@ _由于4月15日在香港有Web3嘉年华，主讲及许多学员都会前往，
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(4) }}</summary>
-<!-- ::: details {{ getTitle(4) }} -->
+::: details {{ getTitle(4) }}
 
 _由于5月6日是五一放假调休补上班的日子，所以往后推到周日_
 
@@ -96,8 +94,7 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 - [课后作业](./notes/exercise4)
 - 补充材料：[snarkjs资源](./notes/snarkjs)
 - 补充材料：[补充讲义](./notes/lecture4)
-<!-- ::: -->
-</details>
+:::
 
 
 <details class="details custom-block" open="">
@@ -106,6 +103,8 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 
 我们将在 ""{{lessons[2]?.name}}" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
 
+- [课程回放](https://www.youtube.com/watch?v=yR4SKrz7EOM)
+- [课堂幻灯片](pathname:///lecture/5-commitment.pdf)
 - [课后作业](./notes/exercise5)
 - 补充材料：[补充讲义](./notes/lecture5)
 
@@ -113,10 +112,14 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 </details>
 
 
-::: details {{ getTitle(6) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(6) }}</summary>
+<!-- ::: details {{ getTitle(6) }} -->
 
 我们将讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)； 快速椭圆曲线翻倍加运算。
-:::
+
+</details>
+<!-- ::: -->
 
 
 ::: details {{ getTitle(7) }}
