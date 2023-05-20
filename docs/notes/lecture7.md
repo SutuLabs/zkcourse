@@ -659,7 +659,9 @@ Table 2: Examples of proof systems which make use of AIR, PAIR, and RAP arithmet
 $$
 \begin{aligned}
 f_{1}\left(X_{1}, X_{2}, X_{1}^{\text {next }}, X_{2}^{\text {next }}\right)
-& =A^{\text {next }}-(B+A) ; f_{2}\left(X_{1}, X_{2}, X_{1}^{\text {next }}, X_{2}^{\text {next }}\right)\\
+& =A^{\text {next }}-(B+A) ;\\
+
+f_{2}\left(X_{1}, X_{2}, X_{1}^{\text {next }}, X_{2}^{\text {next }}\right)
 & =B^{\text {next }}-\left(B+A^{\text {next }}\right) .
 \end{aligned}
 $$
@@ -787,7 +789,7 @@ f\left(X_{1}, X_{2}, X_{1}^{\text {next }}, X_{2}^{\text {next }}\right)
 =1\cdot(4-(2+2))+1\cdot(4-(2\cdot 2))=0
 $$
 
-| $step$ | $s_1$ | $_2$ | $a$ | $b$ |
+| $step$ | $s_1$ | $s_2$ | $a$ | $b$ |
 | :---: | :---: | :---: | :---: | :---: |
 | $i=1$ | 1 | 0 | 0 | 1 |
 | $i=2$ | 0 | 1 | 1 | 2 |
@@ -966,7 +968,7 @@ Table 3: Some examples of other arithmetisations.
 
 [2] E. Ben-Sasson, I. Bentov, Y. Horesh, and M. Riabzev. Scalable, transparent, and postquantum secure computational integrity. Cryptology ePrint Archive, 2018. [3] S. Bowe, J. Grigg, and D. Hopwood. Recursive proof composition without a trusted setup. Cryptology ePrint Archive, 2019.
 
-[4] S. Bowe, D. Hopwood, and J. Grigg. The halo2 Book: Protocol Description. https: //zcash.github.io/halo2/design/protocol.html, 2020.
+[4] S. Bowe, D. Hopwood, and J. Grigg. The halo2 Book: Protocol Description. https://zcash.github.io/halo2/design/protocol.html, 2020.
 
 [5] B. Chen, B. Bünz, D. Boneh, and Z. Zhang. Hyperplonk: Plonk with linear-time prover and high-degree custom gates. Cryptology ePrint Archive, 2022.
 
