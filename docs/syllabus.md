@@ -127,6 +127,8 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 
 我们讨论了算术化的几个例子：QAP，AIR，以及如何从算术电路转换到这些算术程序。
 
+- [课程回放](https://www.youtube.com/watch?v=nYMRQyQ8pHs)
+- [课堂幻灯片](pathname:///lecture/7-arithmetization.pdf)
 - [课后作业](./notes/exercise7)
 - 补充材料：[补充讲义](./notes/lecture7)
 
@@ -134,10 +136,14 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 </details>
 
 
-::: details {{ getTitle(8) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(8) }}</summary>
+<!-- ::: details {{ getTitle(8) }} -->
 
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。我们还将从多项式恒等式讨论像 LOOKUP 这样的证明。
-:::
+
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(9) }}
