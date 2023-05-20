@@ -45,7 +45,7 @@ function getTitle(number) {
 
 在第一次课程中，我们将了解现在的零知识技术及应用。在课上我们将会讨论为什么零知识最近会成为一个令人兴奋的话题，以及为什么我们认为它有可能成为未来十年最大的技术故事之一
 
-- [课程回放](https://www.youtube.com/watch?v=gTzXM1Se-38)
+- [课程回放](https://www.youtube.com/watch?v=MgJskhhYY2o)
 - [课堂幻灯片](pathname:///lecture/1-intro.pdf)
 - [课后作业](./notes/exercise1)
 - 补充材料：[交互式零知识三色问题演示](pathname://interactive/graph.html)
