@@ -4,11 +4,11 @@ outline: deep
 
 # 第 7 课 补充讲义
 
-算术化是将计算编码为代数约束满足问题的过程。这将检验其正确性的复杂性降低到一些概率代数检查。在证明系统中，算术化的选择限制了相应的交互式预言机证明可用于检查的范围（见图1）。
+算术化是将计算编码为代数约束满足问题的过程。这将检验其正确性的复杂性降低到少量概率代数检查。在证明系统中，算术化的选择会影响IOP的选择范围（见图1）。
 
 ![](components_of_proof_system_zh.drawio.svg)
 
-图1：证明系统的组成部分。请回顾第三讲（承诺方案）中，承诺方案可用于将交互式预言机证明（IOP）编译成证明系统。
+图1：证明系统的组成部分。请回顾第5讲（承诺方案）中，承诺方案可用于将交互式预言机证明（IOP）编译成证明系统。
 
 <details>
 <summary>英文原文</summary>
@@ -25,9 +25,9 @@ Figure 1: The components of a proof system. Recall from Lecture 3 (Commitment Sc
 
 二次算术程序（Quadratic Arithmetic Program，QAP) [9] 是一种将语句转换为多项式上二次方程组的方式。它们可以通过线性交互式证明（LIPs）[10]，代数IOPs [6]，多线性IOPs ([14]，[15]) 进行检验。任何具有乘性复杂度$n$的电路都可以转换为一个 $n$次多项式的QAP。
 
-::: tip 定义1.1. [二次算数程序(QAP)]
+::: tip 定义1.1. 二次算术程序(QAP)
 
-一个度数为 $d$ 、大小为 $m$ 的二次算数程序$Q$由多项式 $\left\{L_{j}(X)\right\},\left\{R_{j}(X)\right\},\left\{O_{j}(X)\right\}, j \in[0, \ldots, m-1]$ 和一个目标多项式$T(X):=\prod(X-i)_{0=1}^{d-1}$ 组成。当赋值$\left(1, x_{1}, \ldots, x_{m-1}\right)$**满足** $Q$时，
+一个度数为 $d$ 、大小为 $m$ 的二次算术程序$Q$由多项式 $\left\{L_{j}(X)\right\},\left\{R_{j}(X)\right\},\left\{O_{j}(X)\right\}, j \in[0, \ldots, m-1]$ 和一个目标多项式$T(X):=\prod(X-i)_{0=1}^{d-1}$ 组成。当赋值$\left(1, x_{1}, \ldots, x_{m-1}\right)$**满足** $Q$时，
 
 $$
 T(X) \mid P(X), P(X):=L(X) \cdot R(X)-O(X)
@@ -175,7 +175,7 @@ g_3 : w_1 \cdot w_5 = w_6
 \end{array}
 \end{aligned}
 \right. \;
-,
+.
 $$
 
 现在，我们将每个左边的$l_{i}$线向量收集到矩阵$\mathcal{L}=\left(\overrightarrow{l_{0}}, \overrightarrow{l_{1}}, \overrightarrow{l_{2}}, \overrightarrow{l_{3}}\right)$中，对于右边的$\overrightarrow{r_{i}}$线向量同样如此，而输出$\overrightarrow{o_{i}}$向量也是如此：$\mathcal{R}=\left(\overrightarrow{r_{0}}, \overrightarrow{r_{1}}, \overrightarrow{r_{2}}, \overrightarrow{r_{3}}\right)$，$\mathcal{O}=\left(\overrightarrow{o_{0}}, \overrightarrow{o_{1}}, \overrightarrow{o_{2}}, \overrightarrow{o_{3}}\right)$。
@@ -271,7 +271,7 @@ w_{0} & w_{1} & w_{2} & w_{3} & w_{4} & w_{5} & w_{6}\\
 \end{aligned}
 $$
 
-矩阵$\mathcal{L}, \mathcal{R}, \mathcal{O}$和见证向量$\overrightarrow{x}=\left(1, x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}\right)$一起构成了Iszero电路的R1CS形式。满足方程$\mathcal{L} \cdot \vec{x}+\mathcal{R} \cdot \vec{x}-\mathcal{O} \cdot \vec{x}=0$的向量$\overrightarrow{x}$被称为满足条件的向量。
+矩阵$\mathcal{L}, \mathcal{R}, \mathcal{O}$和见证向量$\overrightarrow{x}=\left(1, x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}\right)$一起构成了IsZero电路的R1CS形式。满足条件的向量$\overrightarrow{x}$可以实现方程$\mathcal{L} \cdot \vec{x}+\mathcal{R} \cdot \vec{x}-\mathcal{O} \cdot \vec{x}=0$。
 
 
 <details>
@@ -532,11 +532,11 @@ O(2)& =x_{0} \cdot O_{0}(2)&&+x_{1} \cdot O_{1}(2)&&+x_{2} \cdot O_{2}(2)&&+x_{3
 \end{aligned}
 $$
 
-因此，$P(2)=L(2) \cdot R(2)-O(2)=\left(1+x_{4}\right) \cdot 1-x_{5}=0 \Longleftrightarrow \mathrm{x}_{0}, \ldots, x_{6}$满足门$g_{2}$。注意，目标多项式$T(X)$的构造是为了在门索引$j \in\{0, \ldots, d-1\}$处为零。换句话说，如果$T(X) \mid P(X)$，那么我们的证人$\vec{x}=\left(1, x_{1}, \ldots, x_{6}\right)$在每个门处都满足$P(X)$。
+因此，$P(2)=L(2) \cdot R(2)-O(2)=\left(1+x_{4}\right) \cdot 1-x_{5}=0 \Longleftrightarrow \mathrm{x}_{0}, \ldots, x_{6}$满足门$g_{2}$。注意，目标多项式$T(X)$的构造是为了在门索引$j \in\{0, \ldots, d-1\}$处为零。换句话说，如果$T(X) \mid P(X)$，那么我们的见证信息$\vec{x}=\left(1, x_{1}, \ldots, x_{6}\right)$在每个门处都满足$P(X)$。
 
 （注意:构造$L_{j}$，我们将每个$L_{j}$设置为在评估点$(0, \ldots, d-1)$列$\mathcal{L}[j]$中的值的插值多项式; $R_{j}$，$O_{j}$同理。）
 
-:::提示 数学基础知识:Lagrange插值
+:::tip 数学基础知识:拉格朗日插值
 
 给定点和评估$\left\{\left(x_{i}, y_{i}\right)\right\}_{i=0}^{d-1}$，我们可以构造一个**插值多项式**$\mathcal{I}(X)$，使$\mathcal{I}\left(x_{i}\right)=y_{i}$:
 
@@ -544,7 +544,7 @@ $$
 \mathcal{I}(X):=\sum_{i=0}^{d-1} y_{i} \cdot \mathcal{L}_{i}(X)
 $$
 
-其中，$\mathcal{L}_{i}(X)$是穿过评估值 $\left\{x_{0}, \ldots, x_{d-1}\right\}$的Lagrange基多项式：
+其中，$\mathcal{L}_{i}(X)$是穿过评估值 $\left\{x_{0}, \ldots, x_{d-1}\right\}$的拉格朗日基本多项式：
 
 $$
 \mathcal{L}_{i}(X):=\prod_{x_{j} \neq x_{i}} \frac{X-x_{j}}{x_{i}-x_{j}}=\left\{\begin{array}{l}
@@ -553,9 +553,9 @@ $$
 \end{array}\right.
 $$
 
-当评估域为$\{0, \ldots, d-1\}$时，我们得到$\mathcal{L}_{i}(X)=1$，如果$X=i$，否则为0。
+当评估域为$\{0, \ldots, d-1\}$时，当$X=i$，我们得到$\mathcal{L}_{i}(X)=1$，否则为0。
 
-当评估域为$\left\{\omega^{0}, \ldots, \omega^{n-1}\right\}$时，我们得到$\mathcal{L}_{i}(X)=1$，如果$X=\omega^{i}$，否则为0。
+当评估域为$\left\{\omega^{0}, \ldots, \omega^{n-1}\right\}$时，当$X=\omega^{i}$，我们得到$\mathcal{L}_{i}(X)=1$，否则为0。
 
 :::
 
