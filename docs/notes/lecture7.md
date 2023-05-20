@@ -27,7 +27,7 @@ Figure 1: The components of a proof system. Recall from Lecture 3 (Commitment Sc
 
 ::: tip 定义1.1. 二次算术程序(QAP)
 
-一个度数为 $d$ 、大小为 $m$ 的二次算术程序$Q$由多项式 $\left\{L_{j}(X)\right\},\left\{R_{j}(X)\right\},\left\{O_{j}(X)\right\}, j \in[0, \ldots, m-1]$ 和一个目标多项式$T(X):=\prod(X-i)_{0=1}^{d-1}$ 组成。当赋值$\left(1, x_{1}, \ldots, x_{m-1}\right)$**满足** $Q$时，
+一个度数为 $d$ 、大小为 $m$ 的二次算术程序$Q$由多项式 $\left\{L_{j}(X)\right\},\left\{R_{j}(X)\right\},\left\{O_{j}(X)\right\}, j \in[0, \ldots, m-1]$ 和一个目标多项式$T(X):=\prod(X-i)_{i=0}^{d-1}$ 组成。当赋值$\left(1, x_{1}, \ldots, x_{m-1}\right)$**满足** $Q$时，
 
 $$
 T(X) \mid P(X), P(X):=L(X) \cdot R(X)-O(X)
