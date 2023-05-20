@@ -11,9 +11,9 @@ lessons:
   - name: 承诺方案
     date: 5月13日周六
   - name: 高效密码运算算法
-    date: 5月20日周六
+    date: 5月24日周三
   - name: 算术化
-    date: 5月27日周六
+    date: 5月20日周六
   - name: PLONK和多项式恒等式
     date: 6月3日周六
   - name: 证明系统栈；递归和组合
@@ -97,9 +97,7 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(5) }}</summary>
-<!-- ::: details {{ getTitle(5) }} -->
+::: details {{ getTitle(5) }}
 
 我们将在 ""{{lessons[2]?.name}}" 环节的基础上，构建向量、单变量多项式和多变量多项式承诺方案。
 
@@ -108,13 +106,14 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 - [课后作业](./notes/exercise5)
 - 补充材料：[补充讲义](./notes/lecture5)
 
-<!-- ::: -->
-</details>
+:::
 
 
 <details class="details custom-block" open="">
 <summary>{{ getTitle(6) }}</summary>
 <!-- ::: details {{ getTitle(6) }} -->
+
+_我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
 
 我们将讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)； 快速椭圆曲线翻倍加运算。
 
@@ -122,10 +121,17 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 <!-- ::: -->
 
 
-::: details {{ getTitle(7) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(7) }}</summary>
+<!-- ::: details {{ getTitle(7) }} -->
 
-我们讨论了算术化的几个例子：ZK程序的中间表示（IR），以及可以被证明系统使用的算术电路。
-:::
+我们讨论了算术化的几个例子：QAP，AIR，以及如何从算术电路转换到这些算术程序。
+
+- [课后作业](./notes/exercise7)
+- 补充材料：[补充讲义](./notes/lecture7)
+
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(8) }}
