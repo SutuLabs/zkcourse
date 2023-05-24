@@ -11,7 +11,7 @@ lessons:
   - name: 承诺方案
     date: 5月13日周六
   - name: 高效密码运算算法
-    date: 5月24日周三
+    date: 5月28日周日
   - name: 算术化
     date: 5月20日周六
   - name: PLONK和多项式恒等式
