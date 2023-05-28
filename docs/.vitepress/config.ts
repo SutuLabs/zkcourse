@@ -61,6 +61,7 @@ export default defineConfig({
         items: [
           { text: 'zkSync', link: '/dapp/zksync' },
           { text: 'halo2', link: '/dapp/halo2' },
+          { text: 'zkML', link: '/dapp/zkml' },
         ]
       },
       {

@@ -49,6 +49,30 @@ const projectStr=`
   description: |
     Tanuki 是一个无需信任的钱包活动评分协议，其使用 ZKP 来无信任地读取链上的历史活动，以计算钱包的分数。
     出于各种需求（比如空投根据），许多协议现在都会需要对曾交互过的钱包进行评分，但当前评分方法大多是在链外进行的，因此存在中心化、不够透明、需要额外信任等问题。为解决这一问题，Tanuki 选择了利用 ZK 协处理器 Axiom，以无信任的方式读取和汇总链上历史数据，这使得每个协议能够公平、透明地计算相关指标，促进无信任的互动。
+
+- name: Worldcoin
+  url: https://worldcoin.org/
+  tags: [zkml]
+  description: |
+    Worldcoin 就不过多叙述了，大家应该比较熟悉
+
+- name: Modulus Labs
+  url: https://www.moduluslabs.xyz/
+  tags: [zkml]
+  description: |
+    Modulus Labs 是 zkML 较为多样化的项目之一，构建链上 AI 所需技术。既致力于用例，也致力于相关研究。在应用方面，Modulus Labs 已经开发了 RockyBot（一个链上交易机器人）和 Leela vs. the World（一个象棋游戏），真人与 Leela 象棋引擎的一个可经验证的链上实例对弈。
+
+- name: Giza
+  url: https://www.gizatech.xyz/
+  tags: [zkml, stark]
+  description: |
+    Giza 是一个致力于通过 AI 发展经济的协议，能够使用完全无信任的方法在链上部署 AI 模型，由 StarkWare 合作支持，最终实现一个为 AI 发展提供替代路径的市场。
+
+- name: Zkaptcha
+  url: https://www.zkaptcha.xyz/
+  tags: [zkml]
+  description: |
+    Zkaptcha 专注于 Web3 中的机器人问题，保护智能合约免受机器人攻击，使用零知识证明来创建抗女巫攻击的智能合约，为智能合约提供验证码服务。目前，该项目使终端用户通过完成验证码来产生一个人类工作的证明，未来，Zkaptcha 将继承 zkML，推出类似于现有的 Web 2 验证码服务，但也可以分析鼠标运动等行为，以确定用户是否为真人。
 `;
 
 
