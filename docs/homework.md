@@ -25,7 +25,7 @@
 | walker | [☑️](https://github.com/Pupil1999/zkshanghai-workshop/blob/main/lecture1-homework.md) | 🟡 | 🟡 | 🟡 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 |
 | cy | [☑️](https://github.com/chrisyy2003/zkshanghai-workshop/blob/main/lecture1-homework.md) | [☑️](https://github.com/chrisyy2003/zkshanghai-workshop/blob/main/lecture2-homework.md) | [☑️](https://github.com/chrisyy2003/zkshanghai-workshop/blob/main/lecture3-homework.md) | 🟡 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 |
 | 国服梅西 | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ |
-| 陈扬帆 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 |
+| Lance | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 |
 | 千阳 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 | 🔒 |
 | 今晚打老虎 | [☑️](https://github.com/OxfordStreet/zkshanghai-workshop/blob/main/lecture1-homework.md) | [☑️](https://github.com/OxfordStreet/zkshanghai-workshop/blob/main/lecture2-homework.md) | 🟡 | 🟡 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 |
 | 李百策 | [☑️](https://github.com/libaice/zkshanghai-workshop/blob/main/lecture1-homework.md) | [☑️](https://github.com/libaice/zkshanghai-workshop/blob/main/lecture2-homework.md) | [☑️](https://github.com/libaice/zkshanghai-workshop/blob/main/lecture3-homework.md) | [☑️](https://github.com/libaice/zkshanghai-workshop/blob/main/lecture4-homework.md) | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 | 💤 |
