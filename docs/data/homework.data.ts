@@ -43,7 +43,7 @@ joly
 	
 线上组team6	
 国服梅西	https://github.com/ZHIDALUO/zkshanghai-workshop
-陈扬帆	 https://github.com/yangfan100/zkshanghai-workshop
+Lance	 https://github.com/yangfan100/zkshanghai-workshop
 千阳	https://github.com/bufrr/zkshanghai-workshop
 今晚打老虎	 https://github.com/OxfordStreet/zkshanghai-workshop
 李百策	https://github.com/libaice/zkshanghai-workshop

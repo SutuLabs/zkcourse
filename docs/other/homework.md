@@ -35,7 +35,7 @@ script.value += `)`;
 
 SAMPLE=sample
 OUTPUT=homework.md
-MAXLECTURE=4
+MAXLECTURE=7
 
 {{script}}
 
