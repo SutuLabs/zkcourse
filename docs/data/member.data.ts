@@ -44,6 +44,7 @@ Jude|区块链工程师|想深入了解一下原理和应用场景，特别是zk
 Akagi201|合约+Rust| 已经有 zk 基础, 再系统学下, 希望学习相关数学以及看看一些基础论文. 在做 aleo miner 相关开发.
 Jackie|Ξ EVM ,Move 生态 开发 |web2 项目 架构 ，希望从深理解研究zk
 Meepo lipeng |web3项目的cofounder|程序员出身，比较喜欢研究区块链技术
+joker|区块链工程师|想要了解zk基本原理和落地使用
 `;
 const members = memberStr
   .split("\n")
