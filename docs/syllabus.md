@@ -10,15 +10,15 @@ lessons:
     date: 5月7日周日
   - name: 承诺方案
     date: 5月13日周六
-  - name: 高效密码运算算法
-    date: 5月28日周日
   - name: 算术化
     date: 5月20日周六
-  - name: PLONK和多项式恒等式
-    date: 6月3日周六
-  - name: 证明系统栈；递归和组合
+  - name: 高效密码运算算法1
+    date: 5月28日周日
+  - name: 高效密码运算算法2
+    date: 6月4日周日
+  - name: PLONK及证明系统栈；
     date: 6月10日周六
-  - name: 应用ZK结构 1
+  - name: 递归和组合；应用ZK结构 1
     date: 6月17日周六
   - name: 应用ZK结构 2
     date: 6月24日周六
@@ -109,21 +109,7 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(6) }}</summary>
-<!-- ::: details {{ getTitle(6) }} -->
-
-_我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
-
-我们将讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)； 快速椭圆曲线翻倍加运算。
-
-</details>
-<!-- ::: -->
-
-
-<details class="details custom-block" open="">
-<summary>{{ getTitle(7) }}</summary>
-<!-- ::: details {{ getTitle(7) }} -->
+::: details {{ getTitle(6) }}
 
 我们讨论了算术化的几个例子：QAP，AIR，以及如何从算术电路转换到这些算术程序。
 
@@ -132,29 +118,47 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 - [课后作业](./notes/exercise7)
 - 补充材料：[补充讲义](./notes/lecture7)
 
-<!-- ::: -->
-</details>
+:::
+
+
+::: details {{ getTitle(7) }}
+
+_我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
+
+我们将从快速椭圆曲线翻倍加运算作为起点，讲解现代零知识证明高效运算背后的数学知识。
+
+- [课程回放](https://www.youtube.com/watch?v=4Z6Ety1ZTtg)
+
+:::
 
 
 <details class="details custom-block" open="">
 <summary>{{ getTitle(8) }}</summary>
 <!-- ::: details {{ getTitle(8) }} -->
 
-我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。我们还将从多项式恒等式讨论像 LOOKUP 这样的证明。
+_我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
+
+我们将接着上节课，继续讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)。
 
 <!-- ::: -->
 </details>
 
 
-::: details {{ getTitle(9) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(9) }}</summary>
+<!-- ::: details {{ getTitle(9) }} -->
 
-基于前四节的学习，我们将概述 zkSNARK 协议的前景，并建立证明系统的分类。我们还将讨论证明系统递归和组合。
-:::
+我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
+基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
+
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(10) }}
 
-我们将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
+我们首先讨论证明系统递归和组合，以此窥看zkEVM等方案的实用化方案。
+我们还将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
 :::
 
 
