@@ -16,7 +16,7 @@ lessons:
     date: 5月28日周日
   - name: 高效密码运算算法2
     date: 6月4日周日
-  - name: PLONK及证明系统栈；
+  - name: PLONK及证明系统技术栈；
     date: 6月10日周六
   - name: 递归和组合；应用ZK结构 1
     date: 6月17日周六
@@ -150,6 +150,9 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
 基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
+
+- 补充材料：[补充讲义1](./notes/lecture8)
+- 补充材料：[补充讲义2](./notes/lecture9)
 
 <!-- ::: -->
 </details>

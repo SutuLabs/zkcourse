@@ -42,8 +42,8 @@ per row to select gate
 preprocessed(fixed at circuit creation): $\vec q_l, \vec q_c$ 
 
 e.g.
-$a+b=c, set q_l=q_r=1, q_o=-1$, rest 0
-$a+b=c, set q_l=q_r=1, q_o=-1$, rest 0
+$a+b=c$, set $q_l=q_r=1, q_o=-1$, rest 0
+$a+b=c$, set $q_l=q_r=1, q_o=-1$, rest 0
 
 | function      | $q_l$ | $q_r$ | $q_o$ | $q_m$ | $q_c$    |
 | ---           | ---   | ---   | ---   | ---   | ---      |
@@ -57,15 +57,15 @@ $$
 \alpha^2 +\beta^2 = \gamma^2
 $$
 
-| expresion          | gate               | polynomial                                    |
-| ---                | ---                | ---                                           |
-| $x_1\cdot x_1=x_2$ | $a_1\cdot b_1=c_1$ | $+0a_1 + 0b_1 - 1c_1 + 1a_1 b_1 + 0 = 0$      |
-| $x_3\cdot x_3=x_4$ | $a_2\cdot b_2=c_2$ | $+0a_2 + 0b_2 - 1c_2 + 1a_2 b_2 + 0 = 0$      |
-| $x_5\cdot x_5=x_6$ | $a_3\cdot b_3=c_3$ | $+0a_3 + 0b_3 - 1c_3 + 1a_3 b_3 + 0 = 0$      |
-| $x_2 + x_4=x_6$    | $a_4 + b_4=c_4$    | $+1a_4 + 1b_4 - 1c_4 + 0a_4 b_4 + 0 = 0$      |
-| $x_1=\alpha$       | $a_5=\alpha$       | $-1a_5 + 0b_5 + 0c_5 + 0a_5 b_5 + \alpha = 0$ |
-| $x_3=\beta$        | $a_6=\beta$        | $-1a_6 + 0b_6 + 0c_6 + 0a_6 b_6 + \beta = 0$  |
-| $x_5=\gamma$       | $a_7=\gamma$       | $-1a_7 + 0b_7 + 0c_7 + 0a_7 b_7 + \gamma = 0$ |
+| a   | b   | c   | expresion          | gate               | polynomial                                    |
+| --- | --- | --- | ---                | ---                | ---                                           |
+| 3   | 3   | 9   | $x_1\cdot x_1=x_2$ | $a_1\cdot b_1=c_1$ | $+0a_1 + 0b_1 - 1c_1 + 1a_1 b_1 + 0 = 0$      |
+| 4   | 4   | 16  | $x_3\cdot x_3=x_4$ | $a_2\cdot b_2=c_2$ | $+0a_2 + 0b_2 - 1c_2 + 1a_2 b_2 + 0 = 0$      |
+| 5   | 5   | 25  | $x_5\cdot x_5=x_6$ | $a_3\cdot b_3=c_3$ | $+0a_3 + 0b_3 - 1c_3 + 1a_3 b_3 + 0 = 0$      |
+| 9   | 16  | 25  | $x_2 + x_4=x_6$    | $a_4 + b_4=c_4$    | $+1a_4 + 1b_4 - 1c_4 + 0a_4 b_4 + 0 = 0$      |
+|     |     |     | $x_1=\alpha$       | $a_5=\alpha$       | $-1a_5 + 0b_5 + 0c_5 + 0a_5 b_5 + \alpha = 0$ |
+|     |     |     | $x_3=\beta$        | $a_6=\beta$        | $-1a_6 + 0b_6 + 0c_6 + 0a_6 b_6 + \beta = 0$  |
+|     |     |     | $x_5=\gamma$       | $a_7=\gamma$       | $-1a_7 + 0b_7 + 0c_7 + 0a_7 b_7 + \gamma = 0$ |
 
 ---
 witness values 
@@ -85,6 +85,489 @@ HINT: DFT: O(nlogn)
 
 ---
 
+
+Roots of Unity
+
+$H:\{x\in\mathbb{F}_{17} | x^4 = 1\}$
+
+$x^4=1 \implies x^2=\pm 1 = 1 \text{ or } 16$
+
+$x^2=1 \implies x=\pm 1 = 1 \text{ or } 16$
+
+$x^2=16 \implies x=\pm 4 = 4 \text{ or } 13$
+
+$H: \{ 1,4,16,13\}$
+
+$k_1=2, k_2=3$
+
+$k_1 H: \{ 2,8,15,9\}$
+
+$k_2 H: \{ 3,12,14,5\}$
+
+
+$$
+f_a= 1 + 13x + 3x^2 +3x^3\\
+f_b=7+3x+14x^2+13x^3\\
+f_c=6+5x+11x^2+4x^3\\
+q_L=13+x+4x^2+16x^3\\
+q_R =13+x+4x^2+16x^3 \\
+q_O = 16 \\
+q_M=5+16x+13x^2+x^3\\
+q_C=0\\
+$$
+
+
+For polynomial $f(x)=a+bx+cx^2+dx^3$, $f(\omega^i)=(1,\omega^i,\omega^{2i},\omega^{3i})\cdot (a,b,c,d)^T$. Define matrix $\Omega=(\omega^{ij})_{i,j}$. By inverse FFT, we have 
+$$(a,b,c,d)=\Omega^{-1}\cdot (f(\omega^0),f(\omega^1),f(\omega^2),f(\omega^3))^T\\
+=\frac{1}{4}(\omega^{-ij})_{i,j}\cdot (f(\omega^0),f(\omega^1),f(\omega^2),f(\omega^3))^T $$
+
+$$
+f(x)=a+bx+cx^2+dx^3
+$$
+
+$$
+(a,b,c,d)=\Omega^{-1}\cdot (f(\omega^0),f(\omega^1),f(\omega^2),f(\omega^3))^T
+$$
+
+$$\Omega^{-1}=
+  \begin{matrix}
+         \frac{1}{4}
+  \end{matrix}
+     \cdot
+     \begin{bmatrix}
+         1 & 1 & 1 & 1\\
+         1 & 13 & 16 & 4\\ 
+         1 & 16 & 1 & 16\\ 
+         1 & 4 & 16 & 13 
+     \end{bmatrix}
+      =
+     \begin{bmatrix}
+         13 & 13 & 13 & 13\\
+         13 & 16 & 4 & 1\\ 
+         13 & 4 & 13 & 4\\ 
+         13 & 1 & 4& 16 
+     \end{bmatrix}
+    $$
+
+Notice $(\omega^{-ij})_{i,j}$ is &#34;conjugate transpose&#34; of $\Omega$, not transpose.
+
+
+$a: \:\:\:\:H: \{ 1,4,16,13\}$
+
+$b: k_1 H: \{ 2,8,15,9\}$
+
+$c: k_2 H: \{ 3,12,14,5\}$
+
+$$
+\begin{align}
+S_{\sigma_1}(x)&=7+13x+10x^2+6x^3 \\
+S_{\sigma_2}(x)&=4+13x^2+x^3\\
+S_{\sigma_3}(x)&=6+7x+3x^2+14x^3\\
+\end{align}
+$$
+
+---
+
+
+### Round 1
+**commit a,b,c**
+
+设 $Z_H(x)=x^4-1$, 有:
+$$
+\begin{align}
+a(x) &= (b_1x+b_2)\cdot Z_H(x) + f_a(x)\\
+b(x) &= (b_3x+b_4)\cdot Z_H(x) + f_b(x) \\
+c(x) &= (b_5x+b_6)\cdot Z_H(x) + f_c(x) \\
+\end{align}
+$$
+
+在域 $\mathbb{F}_{17}$ 上生成随机数，假设是 $(b_1,b_2,b_3,b_4,b_5,b_6)=(7,4,11,12,16,2)$， 则有：
+
+$$
+\begin{align}
+a(x)&=14+6x+3x^2+3x^3+4x^4+7x^5\\
+b(x)&=12+9x+14x^2+13x^3+12x^4+11x^5\\
+c(x)&=4+6x+11x^2+4x^3+2x^4+16x^5\\
+\end{align}
+$$
+
+我们利用 SRS 进行承诺
+
+$$
+\begin{align}
+[a(x)]_1 = (91,66)\\
+[b(x)]_1 = (26,45)\\
+[c(x)]_1 = (91,35)\\
+\end{align}
+$$
+
+
+```python
+def commit_to_curve(coeff, base):
+    commitment = 0*base;
+    s = 2 # secret value
+    for i in range(len(coeff)):
+        commitment += coeff[i]*(s^i*base)
+    return commitment
+a=[14,6,3,3,4,7]
+b=[12,9,14,13,12,11]
+c=[4,6,11,4,2,16]        
+comm_a = commit_to_curve(a,G)
+comm_b = commit_to_curve(b,G)
+comm_c = commit_to_curve(c,G)
+print(comm_a,comm_b,comm_c)
+```
+
+    (91 : 66 : 1) (26 : 45 : 1) (91 : 35 : 1)
+
+
+### Round 2
+
+生成随机数 $(b_7,b_8,b_9)=(14,11,7) \in\mathbb{F}_{17}$, 计算 $z(x)$:
+
+$$
+z(x)=(b_7x^2+b_8x+b_9)\cdot Z_H(x) + acc(x)\\
+$$
+
+根据从验证者得到的挑战 $(\beta,\gamma)=(12,13)\in\mathbb{F}_{17}$ 计算出累加器向量
+
+$$
+\begin{align}
+acc_0 &= 1\\
+acc_i &= acc_{i-1}\frac{(a_i+\beta\omega^{i-1}+\gamma)(b_i+\beta k_1\omega^{i-1}+\gamma)(c_i+\beta k_2\omega^{i-1}+\gamma)}{(a_i+\beta S_{\sigma_1}(\omega^{i-1})+\gamma)(b_i+\beta S_{\sigma_2}(\omega^{i-1})+\gamma)(c_i+\beta S_{\sigma_3}(\omega^{i-1})+\gamma)}\\
+acc_1 &= 1\cdot\frac{(3+12*1+13)(3+12*2*1+13)(9+12*3*1+13)}{(3+12*2+13)(3+12*1+13)(9+12*13+13)}\\
+&=\frac{11\cdot 6\cdot 7}{6\cdot 11\cdot 8}=3\\
+acc_2&=3\cdot\frac{(4+12*4+13)(4+12*2*4+13)(16+12*3*4+13)}{(4+12*8+13)(4+12*4+13)(16+12*9+13)}\\
+&=3\cdot\frac{14\cdot 11\cdot 3}{11\cdot 14\cdot 1}=9\\
+acc_3&=9\frac{(5+12*16+13)(5+12*2*16+13)(25+12*3*16+13)}{(5+12*15+13)(5+12*16+13)(25+12*5+13)}\\
+&=9\cdot\frac{6\cdot 11\cdot 2}{11\cdot 6\cdot 13}=4\\
+\end{align}
+$$
+
+通过插值得到累加器多项式
+
+$$
+\begin{align}
+acc &= (1,3,9,4)\\
+acc(x) &= 16x+5x^2+14x^3\\
+\end{align}
+$$
+
+$$
+\begin{align}
+z(x)& = (14x^2+11x+7)(x^4-1)+16x+5x^2+14x^3\\
+& = 10+5x+8x^2+14x^3+7x^4+11x^5+14x^6\\
+\end{align}
+$$
+
+$$
+[z(x)]_1 = |z(s)|\cdot G_1= (32,59)
+$$
+
+
+```python
+# commitment of z(x)
+omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
+acc=omega.inverse()*matrix(GF(17),[[1],[3],[9],[4]])
+coeff_z = [10,5,8,14,7,11,14]
+commit_to_curve(coeff_z,G)
+```
+
+
+
+
+    (32 : 59 : 1)
+
+
+
+### Round 3
+
+根据验证者发起的挑战 $\alpha=15\in\mathbb{F}_{17}$，计算商多项式
+$$
+\begin{align}
+t(x) &= (a(x)b(x)q_M(x)+a(x)q_L(x)+b(x)q_R(x)+c(x)q_O(x)+PI(x)+q_C(x))\frac{1}{Z_H(x)}\\
+&+(a(x)+\beta x+\gamma)(b(x)+\beta k_1 x+\gamma)(c(x)+\beta k_2 x+\gamma)z(x)\frac{\alpha}{Z_H(x)}\\
+&-(a(x)+\beta S_{\sigma_1}(x)+\gamma)(b(x)+\beta S_{\sigma_2}(x)+\gamma)(c(x)+\beta S_{\sigma_2}(x)+\gamma)z(\omega x)\frac{\alpha}{Z_H(x)}\\
+&+(z(x)-1)L_1(x)\frac{\alpha^2}{Z_H(x)}
+\end{align}
+$$
+分解为度 $<n+2$ 的多项式 $t_{lo}(x), t_{mid}(x), t_{hi}(x)$ 
+其中
+$$t(x)=t_{lo}(x) + x^{n+2} t_{mid}(x)+ x^{2n+4} t_{hi}(x)$$
+
+计算结果： $[t_{lo}(x)]_1, [t_{mid}(x)]_1, [t_{hi}(x)]_1$.
+
+$$
+\begin{align}
+t(x)&=11x^{17} + 7x^{16} + 2x^{15} + 16x^{14} + 6*x^{13} + 15x^{12} + x^{11} + 10x^{10}\\
+& + 2x^9 + x^8 + 8x^7 + 13x^6 + 13x^5 + 9x^3 + 13x^2 + 16x + 11\\
+\end{align}
+$$
+
+$$
+\begin{align}
+t_{lo}&=11+16x+13x^2+9x^3+13x^5\\
+t_{mid}&=13+8x+x^2+2x^3+10x^4+x^5\\
+t_{hi}&=15+6x+16x^2+2x^3+7x^4+11x^5\\
+\end{align}
+$$
+
+承诺结果：
+$$
+\begin{align}
+[t_{lo}]_1&=(12,32)\\
+[t_{mid}]_1&=(26,45)\\
+[t_{hi}]_1&=(91,66)
+\end{align}
+$$
+
+
+```python
+omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
+R.&lt;x&gt;=PolynomialRing(GF(17))
+# Lagrange polynomial L_1(x)
+L_1=omega.inverse()*matrix(GF(17),[[1],[0],[0],[0]])
+l1=13+13*x+13*x^2+13*x^3
+a = 14+6*x+3*x^2+3*x^3+4*x^4+7*x^5
+b =12+9*x+14*x^2+13*x^3+12*x^4+11*x^5
+c=4+6*x+11*x^2+4*x^3+2*x^4+16*x^5
+q_L=13+x+4*x^2+16*x^3
+q_R =13+x+4*x^2+16*x^3 
+q_O = 16 
+q_M=5+16*x+13*x^2+x^3
+z = 10+5*x+8*x^2+14*x^3+7*x^4+11*x^5+14*x^6
+zomega = 10+3*x+9*x^2+12*x^3+7*x^4+10*x^5+3*x^6
+sig1=7+13*x+10*x^2+6*x^3
+sig2=4+13*x^2+x^3
+sig3=6+7*x+3*x^2+14*x^3
+t1=(a*b*q_M + a*q_L +b*q_R+c*q_O)
+t2=(a+12*x+13)*(b+12*2*x+13)*(c+12*3*x+13)*z*15
+t3=(a+12*sig1+13)*(b+12*sig2+13)*(c+12*sig3+13)*zomega*15
+t4=(z-1)*l1*15*15
+final=t1+t2-t3+t4
+t=final/(x^4-1)
+t
+```
+
+
+
+
+    11*x^17 + 7*x^16 + 2*x^15 + 16*x^14 + 6*x^13 + 15*x^12 + x^11 + 10*x^10 + 2*x^9 + x^8 + 8*x^7 + 13*x^6 + 13*x^5 + 9*x^3 + 13*x^2 + 16*x + 11
+
+
+
+
+```python
+tlow=[11,16,13,9,0,13]
+tmid=[13,8,1,2,10,1]
+thi=[15,6,16,2,7,11]
+tlow=commit_to_curve(tlow,G)
+tmid=commit_to_curve(tmid,G)
+thi=commit_to_curve(thi,G)
+print(tlow,tmid,thi)
+```
+
+    (12 : 32 : 1) (26 : 45 : 1) (91 : 66 : 1)
+
+
+### Round 4
+
+线性化。计算评估挑战 $\zeta=5\in\mathbb{F}_{19}$.
+
+计算打开评估
+
+$$\bar{a}=a(\zeta),\bar{b}=b(\zeta),\bar{c}=c(\zeta),\\
+\bar{S_{\sigma_1}}=S_{\sigma_1}(\zeta), \bar{S_{\sigma_2}}=S_{\sigma_2}(\zeta),\\
+\bar{t}=t(\zeta),\\
+\bar{z_{\omega}}=z(\omega\zeta)
+$$
+
+计算线性化多项式（关于承诺值的线性多项式）：
+
+$$
+\begin{align}
+r(x)&=\bar{a}\bar{b}q_m(x)+\bar{a}q_l(x)+\bar{b}q_r(x)+\bar{c}q_o(x)+q_c(x)\\
+&+\alpha(\bar{a}+\beta\zeta+\gamma)(\bar{b}+\beta k_1\zeta+\gamma)(\bar{c}+\beta k_2\zeta+\gamma)z(x)\\
+&-\alpha(\bar{a}+\beta\bar{S_{\sigma_1}}+\gamma)(\bar{b}+\beta\bar{S_{\sigma_2}}+\gamma)\beta\bar{z_{\omega}} S_{\sigma_3}(x)\\
+&+\alpha^2z(x)L_1(\zeta)\\
+\end{align}
+$$
+
+$r(x)$的定义与Plonk论文中不同，在进行线性化时，我们删除了所有常数项。这可以节省一个验证者标量乘法。
+
+计算线性化评估$\bar{r}=r(\zeta)$。并输出
+$$\bar{a},\bar{b},\bar{c},\bar{S_{\sigma_1}},\bar{S_{\sigma_2}},\bar{z_{\omega}},\bar{t},\bar{r}$$
+
+假设$\zeta=5$，则有：（计算过程略）
+
+$$
+\bar{a}=15,\bar{b}=13,\bar{c}=5,\bar{S_{\sigma_1}}=1,\bar{S_{\sigma_2}}=12,\bar{t}=1,\bar{z_{\omega}}=15,\\
+\bar{r}=15
+$$
+
+### Round 5
+
+计算打开挑战 $v\in\mathbb{F}_{17}$
+
+计算打开证明多项式 $W_{\zeta}(x)$:
+
+$$
+W_{\zeta}(x) = 
+ \begin{matrix}
+      \frac{1}{x-\zeta}
+  \end{matrix}\cdot
+ \begin{bmatrix}
+  t_{lo}(x)+\zeta^{n+2}t_{mid}(x)+\zeta^{2n+4}t_{hi}(x)-\bar{t}\\
+  +v(r(x) - \bar{r})\\
+  +v^2(a(x) - \bar{a})\\
+  +v^3(b(x) - \bar{b})\\
+  +v^4(c(x) - \bar{c})\\
+  +v^5(S_{\sigma_1}(x) - \bar{S_{\sigma_1}})\\
+  +v^6(S_{\sigma_2}(x) - \bar{S_{\sigma_2}})\\
+ \end{bmatrix}
+$$
+
+计算打开证明多项式 $W_{\zeta\omega}(x)$:
+
+$$W_{\zeta\omega}(x)=\frac{z(x)-\bar{z_{\omega}}}{x-\zeta\omega}$$
+
+输出
+
+$$[W_{\zeta}(x)]_1,[W_{\zeta\omega}(x)]_1$$
+
+设 $\zeta=5$，则有 $[W_{\zeta}(x)]_1=(91,35),[W_{\zeta\omega}(x)]_1=(65,98)$
+
+
+```python
+FF=GF(17)
+omega=FF(4);zeta=FF(5)
+v=FF(12);tbar=FF(1);abar=FF(15);bbar=FF(13);cbar=FF(5);
+sig1bar=FF(1);sig2bar=FF(12);zomega=FF(15);rbar=FF(15)
+R.&lt;x&gt;=PolynomialRing(GF(17))
+tlow=11+16*x+13*x^2+9*x^3+13*x^5
+tmid=13+8*x+x^2+2*x^3+10*x^4+x^5
+thi=15+6*x+16*x^2+2*x^3+7*x^4+11*x^5
+r=16*x+9*x^2+13*x^3+8*x^4+15*x^5+16*x^6
+sig1=7+13*x+10*x^2+6*x^3
+sig2=4+13*x^2+x^3
+z = 10+5*x+8*x^2+14*x^3+7*x^4+11*x^5+14*x^6
+term1=tlow+zeta^6*tmid+zeta^12*thi-tbar
+term2=v*(r-rbar)
+term3=v^2*(a-abar)+v^3*(b-bbar)+v^4*(c-cbar)
+term4=v^5*(sig1-sig1bar)+v^6*(sig2-sig2bar)
+Wz=(term1+term2+term3+term4)/(x-zeta)
+Wzw=(z-zomega)/(x-zeta*omega)
+```
+
+
+```python
+wz=[16,13,2,9,3,5]
+wzw=[13,14,2,13,2,14]
+c1=commit_to_curve(wz,G)
+c2=commit_to_curve(wzw,G)
+print(c1,c2)
+```
+
+    (91 : 35 : 1) (65 : 98 : 1)
+
+
+### Proof
+
+证据：
+$$\pi=([a],[b],[c],[z],[t_{lo}],[t_{mid}],[t_{hi}],[W_{\zeta}],[W_{\zeta\omega}],\\
+\bar{a},\bar{b},\bar{c},\bar{S_{\sigma_1}},\bar{S_{\sigma_2}},\bar{z_{\omega}},\bar{r})$$
+
+具体值是：
+$$
+\begin{align}
+\pi=(&(91,66),(26,45),(91,35),(32,59),(12,32),(26,45),(91,66),(91,35),(65,98),\\
+&15,13,5,1,12,15,15)
+\end{align}
+$$
+
+
+
+### Verify Preprocessing
+
+利用SRS做预处理
+
+$$
+\begin{align}
+[q_M]          &= [q_M(s)]          &= 12 (1,2) &= (12,69)\\
+[q_L]          &= [q_L(s)]          &= 6 (1,2) &= (32,42) \\
+[q_R]          &= [q_R(s)]          &= 6 (1,2) &= (32,42)\\
+[q_O]          &= [q_O(s)]          &= 16 (1,2) &= (1,99)\\
+[q_C]          &= [q_C(s)]          &= 0 (1,2) &= \infty\\
+[s_{\sigma_1}] &= [s_{\sigma_1}(s)] &= 2 (1,2) &= (68,74)\\
+[s_{\sigma_2}] &= [s_{\sigma_2}(s)] &= 13 (1,2) &= (65,3)\\
+[s_{\sigma_3}] &= [s_{\sigma_3}(s)] &= 8 (1,2) &= (18,49)
+\end{align}
+$$
+
+
+```python
+R.&lt;x&gt;=PolynomialRing(GF(17))
+omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
+qm=omega.inverse()*matrix(GF(17),[[1],[1],[1],[0]]) #[ 5 16 13  1]
+commit_to_curve([ 5, 16, 13,  1],G) # [q_M]=(12,69)
+```
+
+
+
+
+    (12 : 69 : 1)
+
+
+
+### Verifier Algorithm
+
+1. 验证 $[a],[b],[c],[z],[t_{lo}],[t_{mid}],[t_{hi}],[W_{\zeta}],[W_{\zeta\omega}]\in G_1$。
+2. 验证 $\bar{a},\bar{b},\bar{c},\bar{S_{\sigma_1}},\bar{S_{\sigma_2}},\bar{z_{\omega}},\bar{r}\in\mathbb{F}_{17}$。
+3. 验证 $w_{i\in[l]}\in \mathbb{F}_{17}$（公共输入）。
+4. 计算零多项式的评估：$Z_H(\zeta)=\zeta^n-1$。
+5. 计算$L_1(\zeta)=\frac{\zeta^n-1}{n(\zeta-1)}$。
+6. 计算公共输入多项式的评估：$PI(\zeta)=\sum_{i\in[l]}w_iL_i(\zeta)$。
+7. 计算商多项式的评估：
+    $$\bar{t}=\frac{\bar{r}+PI(\zeta)-(\bar{a}+\beta\bar{S_{\sigma_1}}+\gamma)(\bar{b}+\beta\bar{S_{\sigma_2}}+\gamma)(\bar{c}+\gamma)\alpha-L_1(\zeta)\alpha^2}{Z_H(\zeta)}$$
+8. 计算批量多项式承诺的第一部分。定义$[D]=v[r(x)]+u[z]$：
+    $$
+    \begin{align}
+    [D]&=\bar{a}\bar{b}v[q_M]+\bar{a}v[q_L]+\bar{b}v[q_R]+\bar{c}v[q_O]+v[q_C]\\
+    &+((\bar{a}+\beta\zeta+\gamma)(\bar{b}+\beta k_1\zeta+\gamma)(\bar{c}+\beta k_2\zeta+\gamma)\alpha v+L_1(\zeta)\alpha^2 v+u)[z]\\
+    &-(\bar{a}+\beta\bar{S_{\sigma_1}}+\gamma)(\bar{b}+\beta{S_{\sigma_2}}+\gamma)\alpha v\beta\bar{z_{\omega}}[S_{\sigma_3}]
+    \end{align}
+    $$
+9. 计算完整的批量多项式承诺
+    $$[F]=[t_{lo}]+\zeta^{n+2}[t_{mid}]+\zeta^{2n+4}[t_{hi}]+[D]+v^2[a]+v^3[b]+v^4[c]+v^5[S_{\sigma_1}]+v^6[S_{\sigma_2}]$$
+10. 计算群编码的批量评估$[E]$：
+    $$[E]=(\bar{t}+v\bar{r}+v^2\bar{a}+v^3\bar{b}+v^4\bar{c}+v^5\bar{S_{\sigma_1}}+v^6\bar{S_{\sigma_2}}+u\bar{z_{\omega}})\cdot[1]$$
+11. 批量验证所有评估：
+    $$e([W_{\zeta}]+u[W_{\zeta\omega}],[s]_2)=e(\zeta[W_{\zeta}]+u\zeta\omega[W_{\zeta\omega}]+[F]-[E],[1]_2)$$
+
+
+### Calculation
+Let&#39;s check steps $9-11$ for each of the polynomials. For example the terms with $u$
+$$
+e(u\cdot s\cdot [W_{\zeta\omega}],1)\stackrel{?}{=} e(u\zeta\omega[W_{\zeta\omega}]+u[z]-uz(\omega\zeta),1)\\
+e(u\cdot(s-\zeta\omega) [W_{\zeta\omega}],1)\stackrel{?}{=} e(u(z(s)-z(\omega\zeta),1)\\
+(s-\zeta\omega)\frac{z(s)-z(\zeta\omega)}{s-\zeta\omega}\stackrel{?}{=}z(s)-z(\omega\zeta)\\
+$$
+Let&#39;s check $r(x)$, here we define $[W_{\zeta}]=\frac{v(r(s)-r(\zeta))}{s-\zeta}$ for simplicity:
+$$
+e(s\cdot[W_{\zeta}],1)\stackrel{?}{=}e(\zeta[W_{\zeta}]+v\cdot r(s)-v\bar{r},1)\\
+e((s-\zeta)\cdot\frac{v(r(s)-r(\zeta))}{s-\zeta},1)\stackrel{?}{=}e(v(r(s)-r(\zeta)),1)\\
+$$
+Let&#39;s check $t(x)$, here we define $[W_{\zeta}]=\frac{t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta)}{s-\zeta}$ for simplicity
+$$
+e((s-\zeta)[W_{\zeta}],1)\stackrel{?}{=}e([t_{lo}]+\zeta^{n+2}[t_{mid}]+\zeta^{2n+4}[t_{hi}]-\bar{t},1)\\
+e(t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta),1)\stackrel{?}{=}e(t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta),1)\\
+$$
+The other terms are easy to check as well.
+
+---
+
+
+
 pair accumulator polynomial
 $P \in \mathbb{F}[x]$
 accumulator polynomial represents all point up to a position.
@@ -103,7 +586,20 @@ p(0)=1
 p(i+1)=p(x) (v_1 + X(x)+v_2 Y(x))
 $$
 
+## Discrete Fourier Transform
 
+$$
+\newcommand{k}{\textcolor{green}{k}}
+\newcommand{X}{\textcolor{purple}{X}}
+\newcommand{dpi}{\textcolor{orange}{2 \pi}}
+
+\X_{\k}=\textcolor{pink}{ \frac{1}{N} \sum_{n=0}^{N-1} }
+\textcolor{blue}{ x_n}
+\textcolor{red}{e}^{\textcolor{red}{\mathrm{i}} \dpi \k  \textcolor{pink}{\frac{n}{N}}}
+$$
+
+
+为了找到<span style="color: green;">特定频率</span>下的<span style="color: purple;">能量</span>，将<span style="color: blue;">信号</span>在<span style="color: green;">该频率</span>上<span style="color: orange;">绕圆圈</span><span style="color: red;">旋转</span>，并<span style="color: pink;">沿着该路径平分一堆点</span>。
 
 
 ## Reference
