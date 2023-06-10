@@ -67,7 +67,7 @@ $$
 |     |     |     | $x_3=\beta$        | $a_6=\beta$        | $-1a_6 + 0b_6 + 0c_6 + 0a_6 b_6 + \beta = 0$  |
 |     |     |     | $x_5=\gamma$       | $a_7=\gamma$       | $-1a_7 + 0b_7 + 0c_7 + 0a_7 b_7 + \gamma = 0$ |
 
----
+<!-- ---
 witness values 
 $a_1, a_2, a_3, a_4 \in \mathbb{F}$, and we want to encode
 
@@ -83,10 +83,10 @@ interpolated to find $\bar a$ lagrange interpolation.
 
 HINT: DFT: O(nlogn)
 
----
+--- -->
 
 
-Roots of Unity
+### Roots of Unity
 
 $H:\{x\in\mathbb{F}_{17} | x^4 = 1\}$
 
@@ -166,8 +166,6 @@ S_{\sigma_3}(x)&=6+7x+3x^2+14x^3\\
 \end{align}
 $$
 
----
-
 
 ### Round 1
 **commit a,b,c**
@@ -201,24 +199,6 @@ $$
 \end{align}
 $$
 
-
-```python
-def commit_to_curve(coeff, base):
-    commitment = 0*base;
-    s = 2 # secret value
-    for i in range(len(coeff)):
-        commitment += coeff[i]*(s^i*base)
-    return commitment
-a=[14,6,3,3,4,7]
-b=[12,9,14,13,12,11]
-c=[4,6,11,4,2,16]        
-comm_a = commit_to_curve(a,G)
-comm_b = commit_to_curve(b,G)
-comm_c = commit_to_curve(c,G)
-print(comm_a,comm_b,comm_c)
-```
-
-    (91 : 66 : 1) (26 : 45 : 1) (91 : 35 : 1)
 
 
 ### Round 2
@@ -265,19 +245,6 @@ $$
 $$
 
 
-```python
-# commitment of z(x)
-omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
-acc=omega.inverse()*matrix(GF(17),[[1],[3],[9],[4]])
-coeff_z = [10,5,8,14,7,11,14]
-commit_to_curve(coeff_z,G)
-```
-
-
-
-
-    (32 : 59 : 1)
-
 
 
 ### Round 3
@@ -321,53 +288,6 @@ $$
 \end{align}
 $$
 
-
-```python
-omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
-R.&lt;x&gt;=PolynomialRing(GF(17))
-# Lagrange polynomial L_1(x)
-L_1=omega.inverse()*matrix(GF(17),[[1],[0],[0],[0]])
-l1=13+13*x+13*x^2+13*x^3
-a = 14+6*x+3*x^2+3*x^3+4*x^4+7*x^5
-b =12+9*x+14*x^2+13*x^3+12*x^4+11*x^5
-c=4+6*x+11*x^2+4*x^3+2*x^4+16*x^5
-q_L=13+x+4*x^2+16*x^3
-q_R =13+x+4*x^2+16*x^3 
-q_O = 16 
-q_M=5+16*x+13*x^2+x^3
-z = 10+5*x+8*x^2+14*x^3+7*x^4+11*x^5+14*x^6
-zomega = 10+3*x+9*x^2+12*x^3+7*x^4+10*x^5+3*x^6
-sig1=7+13*x+10*x^2+6*x^3
-sig2=4+13*x^2+x^3
-sig3=6+7*x+3*x^2+14*x^3
-t1=(a*b*q_M + a*q_L +b*q_R+c*q_O)
-t2=(a+12*x+13)*(b+12*2*x+13)*(c+12*3*x+13)*z*15
-t3=(a+12*sig1+13)*(b+12*sig2+13)*(c+12*sig3+13)*zomega*15
-t4=(z-1)*l1*15*15
-final=t1+t2-t3+t4
-t=final/(x^4-1)
-t
-```
-
-
-
-
-    11*x^17 + 7*x^16 + 2*x^15 + 16*x^14 + 6*x^13 + 15*x^12 + x^11 + 10*x^10 + 2*x^9 + x^8 + 8*x^7 + 13*x^6 + 13*x^5 + 9*x^3 + 13*x^2 + 16*x + 11
-
-
-
-
-```python
-tlow=[11,16,13,9,0,13]
-tmid=[13,8,1,2,10,1]
-thi=[15,6,16,2,7,11]
-tlow=commit_to_curve(tlow,G)
-tmid=commit_to_curve(tmid,G)
-thi=commit_to_curve(thi,G)
-print(tlow,tmid,thi)
-```
-
-    (12 : 32 : 1) (26 : 45 : 1) (91 : 66 : 1)
 
 
 ### Round 4
@@ -438,38 +358,6 @@ $$[W_{\zeta}(x)]_1,[W_{\zeta\omega}(x)]_1$$
 设 $\zeta=5$，则有 $[W_{\zeta}(x)]_1=(91,35),[W_{\zeta\omega}(x)]_1=(65,98)$
 
 
-```python
-FF=GF(17)
-omega=FF(4);zeta=FF(5)
-v=FF(12);tbar=FF(1);abar=FF(15);bbar=FF(13);cbar=FF(5);
-sig1bar=FF(1);sig2bar=FF(12);zomega=FF(15);rbar=FF(15)
-R.&lt;x&gt;=PolynomialRing(GF(17))
-tlow=11+16*x+13*x^2+9*x^3+13*x^5
-tmid=13+8*x+x^2+2*x^3+10*x^4+x^5
-thi=15+6*x+16*x^2+2*x^3+7*x^4+11*x^5
-r=16*x+9*x^2+13*x^3+8*x^4+15*x^5+16*x^6
-sig1=7+13*x+10*x^2+6*x^3
-sig2=4+13*x^2+x^3
-z = 10+5*x+8*x^2+14*x^3+7*x^4+11*x^5+14*x^6
-term1=tlow+zeta^6*tmid+zeta^12*thi-tbar
-term2=v*(r-rbar)
-term3=v^2*(a-abar)+v^3*(b-bbar)+v^4*(c-cbar)
-term4=v^5*(sig1-sig1bar)+v^6*(sig2-sig2bar)
-Wz=(term1+term2+term3+term4)/(x-zeta)
-Wzw=(z-zomega)/(x-zeta*omega)
-```
-
-
-```python
-wz=[16,13,2,9,3,5]
-wzw=[13,14,2,13,2,14]
-c1=commit_to_curve(wz,G)
-c2=commit_to_curve(wzw,G)
-print(c1,c2)
-```
-
-    (91 : 35 : 1) (65 : 98 : 1)
-
 
 ### Proof
 
@@ -498,24 +386,12 @@ $$
 [q_R]          &= [q_R(s)]          &= 6 (1,2) &= (32,42)\\
 [q_O]          &= [q_O(s)]          &= 16 (1,2) &= (1,99)\\
 [q_C]          &= [q_C(s)]          &= 0 (1,2) &= \infty\\
-[s_{\sigma_1}] &= [s_{\sigma_1}(s)] &= 2 (1,2) &= (68,74)\\
-[s_{\sigma_2}] &= [s_{\sigma_2}(s)] &= 13 (1,2) &= (65,3)\\
-[s_{\sigma_3}] &= [s_{\sigma_3}(s)] &= 8 (1,2) &= (18,49)
+[S_{\sigma_1}] &= [S_{\sigma_1}(s)] &= 2 (1,2) &= (68,74)\\
+[S_{\sigma_2}] &= [S_{\sigma_2}(s)] &= 13 (1,2) &= (65,3)\\
+[S_{\sigma_3}] &= [S_{\sigma_3}(s)] &= 8 (1,2) &= (18,49)
 \end{align}
 $$
 
-
-```python
-R.&lt;x&gt;=PolynomialRing(GF(17))
-omega=matrix(GF(17),[[1,1,1,1],[1,4,16,13],[1,16,1,16],[1,13,16,4]])
-qm=omega.inverse()*matrix(GF(17),[[1],[1],[1],[0]]) #[ 5 16 13  1]
-commit_to_curve([ 5, 16, 13,  1],G) # [q_M]=(12,69)
-```
-
-
-
-
-    (12 : 69 : 1)
 
 
 
@@ -545,30 +421,10 @@ commit_to_curve([ 5, 16, 13,  1],G) # [q_M]=(12,69)
     $$e([W_{\zeta}]+u[W_{\zeta\omega}],[s]_2)=e(\zeta[W_{\zeta}]+u\zeta\omega[W_{\zeta\omega}]+[F]-[E],[1]_2)$$
 
 
-### Calculation
-Let&#39;s check steps $9-11$ for each of the polynomials. For example the terms with $u$
-$$
-e(u\cdot s\cdot [W_{\zeta\omega}],1)\stackrel{?}{=} e(u\zeta\omega[W_{\zeta\omega}]+u[z]-uz(\omega\zeta),1)\\
-e(u\cdot(s-\zeta\omega) [W_{\zeta\omega}],1)\stackrel{?}{=} e(u(z(s)-z(\omega\zeta),1)\\
-(s-\zeta\omega)\frac{z(s)-z(\zeta\omega)}{s-\zeta\omega}\stackrel{?}{=}z(s)-z(\omega\zeta)\\
-$$
-Let&#39;s check $r(x)$, here we define $[W_{\zeta}]=\frac{v(r(s)-r(\zeta))}{s-\zeta}$ for simplicity:
-$$
-e(s\cdot[W_{\zeta}],1)\stackrel{?}{=}e(\zeta[W_{\zeta}]+v\cdot r(s)-v\bar{r},1)\\
-e((s-\zeta)\cdot\frac{v(r(s)-r(\zeta))}{s-\zeta},1)\stackrel{?}{=}e(v(r(s)-r(\zeta)),1)\\
-$$
-Let&#39;s check $t(x)$, here we define $[W_{\zeta}]=\frac{t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta)}{s-\zeta}$ for simplicity
-$$
-e((s-\zeta)[W_{\zeta}],1)\stackrel{?}{=}e([t_{lo}]+\zeta^{n+2}[t_{mid}]+\zeta^{2n+4}[t_{hi}]-\bar{t},1)\\
-e(t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta),1)\stackrel{?}{=}e(t_{lo}(s)+\zeta^{n+2}t_{mid}(s)+\zeta^{2n+4}t_{hi}(s)-t(\zeta),1)\\
-$$
-The other terms are easy to check as well.
-
----
 
 
 
-pair accumulator polynomial
+<!-- pair accumulator polynomial
 $P \in \mathbb{F}[x]$
 accumulator polynomial represents all point up to a position.
 
@@ -584,7 +440,7 @@ $$
 p(0)=1
 \\
 p(i+1)=p(x) (v_1 + X(x)+v_2 Y(x))
-$$
+$$ -->
 
 ## Discrete Fourier Transform
 

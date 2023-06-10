@@ -132,16 +132,13 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(8) }}</summary>
-<!-- ::: details {{ getTitle(8) }} -->
+::: details {{ getTitle(8) }}
 
 _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
 
 我们将接着上节课，继续讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)。
 
-<!-- ::: -->
-</details>
+:::
 
 
 <details class="details custom-block" open="">
@@ -151,18 +148,25 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
 基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
 
-- 补充材料：[补充讲义1](./notes/lecture8)
-- 补充材料：[补充讲义2](./notes/lecture9)
+<!-- - [课程回放](https://www.youtube.com/watch?v=smJz5RdY0Nc) -->
+- [课堂幻灯片](pathname:///lecture/9-plonk.pdf)
+<!-- - 补充材料：[补充讲义-Plonk](./notes/lecture8) -->
+- 补充材料：[补充讲义-Pinocchio](./notes/lecture9)
+- 补充材料：PLONK by Hand [1](https://research.metastate.dev/plonk-by-hand-part-1/) [2](https://research.metastate.dev/plonk-by-hand-part-2-the-proof/) [3](https://research.metastate.dev/plonk-by-hand-part-3-verification/) [Note](https://hackmd.io/@chaosma/ByBIElFno)
 
 <!-- ::: -->
 </details>
 
 
-::: details {{ getTitle(10) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(10) }}</summary>
+<!-- ::: details {{ getTitle(10) }} -->
 
 我们首先讨论证明系统递归和组合，以此窥看zkEVM等方案的实用化方案。
 我们还将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
-:::
+
+<!-- ::: -->
+</details>
 
 
 ::: details {{ getTitle(11) }}
