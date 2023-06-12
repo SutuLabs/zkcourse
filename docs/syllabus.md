@@ -16,7 +16,7 @@ lessons:
     date: 5月28日周日
   - name: 高效密码运算算法2
     date: 6月4日周日
-  - name: PLONK及证明系统技术栈；
+  - name: PLONK及证明系统技术栈
     date: 6月10日周六
   - name: 递归和组合；应用ZK结构 1
     date: 6月17日周六
@@ -114,7 +114,7 @@ _由于5月6日是五一放假调休补上班的日子，所以往后推到周�
 我们讨论了算术化的几个例子：QAP，AIR，以及如何从算术电路转换到这些算术程序。
 
 - [课程回放](https://www.youtube.com/watch?v=nYMRQyQ8pHs)
-- [课堂幻灯片](pathname:///lecture/7-arithmetization.pdf)
+- [课堂幻灯片](pathname:///lecture/6-arithmetization.pdf)
 - [课后作业](./notes/exercise7)
 - 补充材料：[补充讲义](./notes/lecture7)
 
@@ -128,6 +128,7 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 我们将从快速椭圆曲线翻倍加运算作为起点，讲解现代零知识证明高效运算背后的数学知识。
 
 - [课程回放](https://www.youtube.com/watch?v=4Z6Ety1ZTtg)
+- [课堂幻灯片](pathname:///lecture/7-cryptographic-operations.pdf)
 
 :::
 
@@ -137,6 +138,9 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因此时间做了调整_
 
 我们将接着上节课，继续讨论高效打开和多项式算法的技术，包括数论变换（NTT）； 多标量乘法 (MSM)。
+
+- [课程回放](https://www.youtube.com/watch?v=9l2pu7gKhOQ)
+- [课堂幻灯片](pathname:///lecture/7-cryptographic-operations.pdf)
 
 :::
 
@@ -148,11 +152,15 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
 基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
 
-<!-- - [课程回放](https://www.youtube.com/watch?v=smJz5RdY0Nc) -->
+- [课程回放](https://www.youtube.com/watch?v=WsPpVyCmhDQ)
 - [课堂幻灯片](pathname:///lecture/9-plonk.pdf)
 <!-- - 补充材料：[补充讲义-Plonk](./notes/lecture8) -->
 - 补充材料：[补充讲义-Pinocchio](./notes/lecture9)
-- 补充材料：PLONK by Hand [1](https://research.metastate.dev/plonk-by-hand-part-1/) [2](https://research.metastate.dev/plonk-by-hand-part-2-the-proof/) [3](https://research.metastate.dev/plonk-by-hand-part-3-verification/) [Note](https://hackmd.io/@chaosma/ByBIElFno)
+- 补充材料：PLONK by Hand:
+  [第 1 部分](https://research.metastate.dev/plonk-by-hand-part-1/),
+  [第 2 部分](https://research.metastate.dev/plonk-by-hand-part-2-the-proof/),
+  [第 3 部分](https://research.metastate.dev/plonk-by-hand-part-3-verification/),
+  [笔记](https://hackmd.io/@chaosma/ByBIElFno)
 
 <!-- ::: -->
 </details>
