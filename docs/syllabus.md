@@ -22,8 +22,6 @@ lessons:
     date: 6月17日周六
   - name: 应用ZK结构 2
     date: 6月24日周六
-  - name: 应用演示
-    date: 7月1日周六
 ---
 
 <script setup>
@@ -145,9 +143,7 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 :::
 
 
-<details class="details custom-block" open="">
-<summary>{{ getTitle(9) }}</summary>
-<!-- ::: details {{ getTitle(9) }} -->
+::: details {{ getTitle(9) }}
 
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
 基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
@@ -162,8 +158,7 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
   [第 3 部分](https://research.metastate.dev/plonk-by-hand-part-3-verification/),
   [笔记](https://hackmd.io/@chaosma/ByBIElFno)
 
-<!-- ::: -->
-</details>
+:::
 
 
 <details class="details custom-block" open="">
@@ -173,20 +168,21 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 我们首先讨论证明系统递归和组合，以此窥看zkEVM等方案的实用化方案。
 我们还将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
 
+<!-- - [课程回放](https://www.youtube.com/watch?v=) -->
+- [课堂幻灯片](pathname:///lecture/10-recursion-applied-zk-1.pdf)
+
 <!-- ::: -->
 </details>
 
 
-::: details {{ getTitle(11) }}
+<details class="details custom-block" open="">
+<summary>{{ getTitle(11) }}</summary>
+<!-- ::: details {{ getTitle(11) }} -->
 
 我们将讨论 zkSNARK 的其他用途：非完整信息游戏、加密数据市场、ZKML、ZKVM、递归 ZK 证明等。
-:::
 
-
-::: details {{ getTitle(12) }}
-
-在最后一节课中，学员和导师将展示他们开发的项目和 ZK 应用程序！
-:::
+<!-- ::: -->
+</details>
 
 
 ::: details 结业典礼【待定】 ZK Shanghai Hackathon
