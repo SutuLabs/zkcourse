@@ -168,7 +168,7 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 我们首先讨论证明系统递归和组合，以此窥看zkEVM等方案的实用化方案。
 我们还将讨论实用的ZK构造：假名消息传递的成员证明、基于无效器的隐私数字货币转移、zk-email等。
 
-<!-- - [课程回放](https://www.youtube.com/watch?v=) -->
+- [课程回放](https://www.youtube.com/watch?v=c7aisDUVK1c)
 - [课堂幻灯片](pathname:///lecture/10-recursion-applied-zk-1.pdf)
 
 <!-- ::: -->
