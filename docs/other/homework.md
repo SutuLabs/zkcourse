@@ -35,7 +35,8 @@ script.value += `)`;
 
 SAMPLE=sample
 OUTPUT=homework.md
-MAXLECTURE=7
+MAXLECTURE=6
+MAXLECTURE=6
 
 {{script}}
 
@@ -74,13 +75,13 @@ echo>>$OUTPUT
 
 
 echo -n '| 姓名 |'>>$OUTPUT
-for i in {1..12}; do
+for i in {1..6}; do
   echo -n " ${i} |">>$OUTPUT
 done
 echo>>$OUTPUT
 
 echo -n '|'>>$OUTPUT
-for i in {0..12}; do
+for i in {0..6}; do
   echo -n " --- |">>$OUTPUT
 done
 echo>>$OUTPUT
@@ -94,7 +95,7 @@ for repo in "${repos[@]}"; do
   name=${strarr[1]}
   echo working on $name
   if [ -d "$name" ]; then
-    for i in {1..12}; do
+    for i in {1..6}; do
       filename=lecture${i}-homework.md
 
       if [[ -f "$name/$filename" ]]; then
@@ -112,7 +113,7 @@ for repo in "${repos[@]}"; do
       fi
     done
   else
-    for i in {1..12}; do
+    for i in {1..6}; do
       echo -n " 🔒 |">>$OUTPUT
     done
   fi
