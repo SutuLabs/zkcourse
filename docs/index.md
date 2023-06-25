@@ -5,14 +5,14 @@ layout: home
 hero:
   name: "零知识证明工作坊"
   text: "ZK Shanghai 2023"
-  tagline: 线上、线下同步进行
+  tagline: 课程时间：2023年4月-6月，可看回放
   actions:
     - theme: brand
-      text: 学习
+      text: 开始学习
       link: /syllabus
-    - theme: alt
-      text: 报名
-      link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g
+    # - theme: alt
+    #   text: 报名
+    #   link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g
 
 features:
   - title: 支撑数学知识
