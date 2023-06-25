@@ -178,8 +178,8 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 
 我们将讨论 zkSNARK 的其他用途：非完整信息游戏、加密数据市场、ZKML、递归 ZK 的应用等。
 
-<!-- - [课程回放](https://www.youtube.com/watch?v=c7aisDUVK1c) -->
-- [课堂幻灯片](pathname:///lecture/11-applied-zk-1.pdf)
+- [课程回放](https://www.youtube.com/watch?v=UZheSU3oSc4)
+- [课堂幻灯片](pathname:///lecture/11-applied-zk-2.pdf)
 
 <!-- ::: -->
 </details>
