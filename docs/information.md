@@ -14,13 +14,11 @@
 
 **地点**：上海市杨浦区国康路100号上海国际设计中心22楼多功能厅
 
-**时间**：每周六（除了第二次和第四次课程时间有调整，见[课程表](/syllabus)）下午 14:00~15:30 上课，16:00~17:00 答疑。
+**时间**：一般时间为每周六（部分课程时间有调整，具体见[课程表](/syllabus)）下午 14:00~15:30 上课，16:00~17:00 答疑。
 
 **线上答疑**: [Github Discussion](https://github.com/SutuLabs/zkcourse/discussions)
 
 **视频回放免责声明**：部分课堂活动将进行录制。这些回放可能会在其他课程中重复使用，供其他学生查看，或用于其他教育和研究目的。 如果您有任何疑问，请联系教学团队的成员。
-
-**分组安排**：[此处](https://docs.google.com/spreadsheets/d/1fCl3wToU6M0pozyXiq5QXK6V1eCic5BaiMFkmSKcDlA/edit#gid=0)
 
 **作业模版**：[此处](https://github.com/SutuLabs/zkcourse-homework)
 
@@ -47,7 +45,7 @@
 
 **对于只是“随便看看”的学生**：
   - 如果你只是想跟着讲座一起上课，欢迎你来上课。
-  - 有兴趣多动手实践但除此之外没有太多时间的学生，可能也有兴趣完成一些思考题，并在答疑期间进行讨论（或在 Discord/Github Discussion 等进行讨论）。
+  - 有兴趣多动手实践但除此之外没有太多时间的学生，可能也有兴趣完成一些思考题，并在答疑期间进行讨论（或在 [Github Discussion](https://github.com/SutuLabs/zkcourse/discussions) 等进行讨论）。
 
 **对于有兴趣认真深入ZK的同学**：
   - 强烈建议有兴趣获得实践经验的学生参加课程的小组项目部分。
