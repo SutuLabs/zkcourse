@@ -53,7 +53,7 @@ zyp	https://github.com/breeze2501/zkshanghai-workshop
 	
 线上组team7	
 liberty Ma	
-jude	
+jude	https://github.com/QlDoors/zkshanghai-workshop 
 皮卡	https://github.com/wenjin1997/zkshanghai-workshop
 lysiane	
 lansane	
@@ -99,13 +99,15 @@ Anonymous
 click	
 gss	
 kael	
-demian德米安	
+demian德米安	https://github.com/Demian101/zkshanghai-workshop/
 	
 线上组team12	
 shane	
 鱼丸	
 kp	
 diego	
+rectinajh	https://github.com/rectinajh/zkshanghai-workshop
+one	https://github.com/micr0ne/zkshanghai-workshop
 `;
 
 const members = memberStr
