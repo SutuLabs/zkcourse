@@ -18,7 +18,7 @@ KK	https://github.com/0xKKv7/zkshanghai-workshop
 ther	https://github.com/ther0908/zkshanghai-workshop
 小吖么一朗	
 wayne	
-李月	
+李月	https://github.com/yoliNL/zkshanghai-workshop
 	
 线上组team4	
 Yuhan Zhang	
@@ -31,7 +31,7 @@ tt	https://github.com/TT-Wang/zkshanghai-workshop
 叶大伟	https://github.com/nifengttz/zkshanghai-workshop
 	
 线上组team5	
-1984	
+1984	https://github.com/punish-yh/zkcourse-homework
 林庚	
 石越	
 walker	https://github.com/Pupil1999/zkshanghai-workshop
@@ -43,7 +43,7 @@ joly
 	
 线上组team6	
 国服梅西	https://github.com/ZHIDALUO/zkshanghai-workshop
-Lance	 https://github.com/yangfan100/zkshanghai-workshop
+Lance	https://github.com/chen-yangfan/zkshanghai-workshop
 千阳	https://github.com/bufrr/zkshanghai-workshop
 今晚打老虎	 https://github.com/OxfordStreet/zkshanghai-workshop
 李百策	https://github.com/libaice/zkshanghai-workshop
@@ -77,7 +77,7 @@ mrtree	https://github.com/mrttree/zkcourse-homework
 张彭龙	 https://github.com/zhangdaozhu/zkcourse-homework
 li cong	https://github.com/congli35/zkcourse-homework
 meepo lipeng	
-Dazsao	https://github.com/DessertHeart/zkshanghai-workshop
+dezso	https://github.com/DessertHeart/zkshanghai-workshop
 Jackie	https://github.com/Jackietan99/zkcourse-homework
 keep	https://github.com/readygo67/zkshanghai-workshop
 	
@@ -99,7 +99,7 @@ Anonymous
 click	
 gss	
 kael	
-demian德米安	https://github.com/Demian101/zkshanghai-workshop/
+demian德米安	https://github.com/Demian101/zkshanghai-workshop
 	
 线上组team12	
 shane	
@@ -108,6 +108,7 @@ kp
 diego	
 rectinajh	https://github.com/rectinajh/zkshanghai-workshop
 one	https://github.com/micr0ne/zkshanghai-workshop
+Yhl	https://github.com/yehanlong/zkshanghai-workshop
 `;
 
 const members = memberStr

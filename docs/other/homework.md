@@ -89,9 +89,11 @@ echo>>$OUTPUT
 for repo in "${repos[@]}"; do
   read -a strarr <<< "$repo" # uses IFS
 
-  echo -n "| ${strarr[1]} |">>$OUTPUT
   repo=${strarr[0]}
   name=${strarr[1]}
+
+  echo -n "| [${name}](${repo}) |">>$OUTPUT
+
   echo working on $name
   if [ -d "$name" ]; then
     for i in {1..7}; do
