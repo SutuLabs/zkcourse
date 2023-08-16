@@ -37,6 +37,9 @@ SAMPLE=sample
 OUTPUT=homework.md
 MAXLECTURE=7
 
+bestrepos=("皮卡")
+goodrepos=("1984" "Lance" "garen_woo_v1_8" "jude" "demian德米安" "rectinajh")
+
 {{script}}
 
 echo "# 家庭作业">$OUTPUT
@@ -91,8 +94,16 @@ for repo in "${repos[@]}"; do
 
   repo=${strarr[0]}
   name=${strarr[1]}
+  hint=
 
-  echo -n "| [${name}](${repo}) |">>$OUTPUT
+  if [[ ${bestrepos[@]} =~ $name ]]; then
+    hint=🏅🏅
+  fi
+  if [[ ${goodrepos[@]} =~ $name ]]; then
+    hint=🏅
+  fi
+
+  echo -n "| [${name}](${repo}) ${hint} |">>$OUTPUT
 
   echo working on $name
   if [ -d "$name" ]; then
