@@ -6,9 +6,19 @@
     "preview:docs": "vitepress preview docs"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "autoprefixer": "^9",
     "big-integer": "^1.6.51",
     "js-yaml": "^4.1.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "postcss": "^7",
+    "tailwindcss": "^3.3.3",
     "vitepress": "^1.0.0-alpha.64"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
