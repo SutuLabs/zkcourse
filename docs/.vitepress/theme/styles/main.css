@@ -1,0 +1,11 @@
+:root {
+  --vp-c-purple-1: #A28AFF;
+  --vp-c-purple-2: #7A57FF;
+  --vp-c-purple-3: #663DFF;
+  --vp-c-purple-soft: rgba(95, 76, 161, 0.14);
+
+  --vp-c-brand-1: var(--vp-c-purple-1);
+  --vp-c-brand-2: var(--vp-c-purple-2);
+  --vp-c-brand-3: var(--vp-c-purple-3);
+  --vp-c-brand-soft: var(--vp-c-purple-soft);
+}
