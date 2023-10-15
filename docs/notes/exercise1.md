@@ -4,7 +4,7 @@
 
 ## ZKP 三色演示
 
-访问并试用[交互式演示](pathname:///interactive/graph.html)。 这是我们在课堂上学习的三色示例的程序化版本。
+访问并试用[交互式演示](/interactive/graph.html){target="_blank"}。 这是我们在课堂上学习的三色示例的程序化版本。
 
 - 回答页面底部的练习 1。
 
