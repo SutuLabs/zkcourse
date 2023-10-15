@@ -1,8 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "serve": "npm run serve:docs",
-    "serve:docs": "vitepress dev docs",
+    "dev": "npm run dev:docs",
+    "dev:docs": "vitepress dev docs",
     "build:docs": "vitepress build docs",
     "preview:docs": "vitepress preview docs"
   },
