@@ -5,11 +5,14 @@ layout: home
 hero:
   name: "零知识证明工作坊"
   text: "ZK Shanghai 2023"
-  tagline: 课程时间：2023年4月-6月，可看回放
+  tagline: 春季课程可看回放，冬季课程即将开启
   actions:
     - theme: brand
-      text: 开始学习
+      text: 春季课程
       link: /syllabus
+    - theme: alt
+      text: 冬季课程
+      link: /23winter/syllabus
     # - theme: alt
     #   text: 报名
     #   link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g
