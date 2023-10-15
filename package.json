@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "serve": "npm run serve:docs",
     "serve:docs": "vitepress dev docs",
@@ -9,6 +10,6 @@
     "big-integer": "^1.6.51",
     "js-yaml": "^4.1.0",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.0.0-alpha.64"
+    "vitepress": "^1.0.0-rc.20"
   }
 }
