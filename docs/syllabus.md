@@ -146,7 +146,7 @@ _我们特别邀请了美国纽约大学的陆晨博士来讲解这节课，因�
 ::: details {{ getTitle(9) }}
 
 我们将深入研究一种基于多项式承诺方案的 zkSNARK 构造：PLONK 协议，以及一种特定的类PLONK算术化。
-基于前四节的学习，我们将概述 zkSNARK 协议的全景，并深入讲解Pinocchio协议。
+基于前四节的学习，我们将概述 zkSNARK 协议的全景。
 
 - [课程回放](https://www.youtube.com/watch?v=WsPpVyCmhDQ)
 - [课堂幻灯片](/lecture/9-plonk.pdf){target="_blank"}
