@@ -1,21 +1,22 @@
 ---
+dates:
+  - date: 11月25日周六
+  - date: 11月25日周六
+  - date: 12月2日周六
+  - date: 12月2日周六
+  - date: 12月9日周六
+  - date: 12月9日周六
+  - date: 12月16日周六
+  - date: 12月16日周六
 lessons:
   - name: 现代 ZKP 漫谈
-    date: 11月18日周六
   - name: 算术电路技术栈
-    date: 11月18日周六
-  - name: ZKP 背后的现代代数
-    date: 11月25日周六
+  - name: ZKP 背后的抽象代数
   - name: Halo2 基础电路
-    date: 11月25日周六
   - name: ZKP 原语
-    date: 12月2日周六
   - name: STARK 基础电路
-    date: 12月2日周六
   - name: 递归 ZKP
-    date: 12月9日周六
   - name: Plonky2 递归电路
-    date: 12月9日周六
 ---
 
 <script setup>
@@ -24,9 +25,10 @@ import { isProxy, toRaw } from 'vue';
 
 const { frontmatter } = useData()
 const lessons = toRaw(frontmatter.value).lessons
+const dates = toRaw(frontmatter.value).dates
 
 function getTitle(number) {
-    return `第 ${number} 课【${ lessons[number - 1].date }】 ${ lessons[number - 1]?.name }`;
+    return `第 ${number} 课【${ dates[number - 1].date }】 ${ lessons[number - 1]?.name }`;
 }
 
 </script>
@@ -53,6 +55,9 @@ function getTitle(number) {
 <!-- ::: details {{ getTitle(2) }} -->
 
 介绍三种约束系统（R1CS、Plonk(ish)、AIR）的算术化特点，以及对应前端技术栈方案特点。
+并通过编写Mina合约，了解和练习R1CS约束系统。
+
+- [练习](./notes/exercise2)
 
 </details>
 <!-- ::: -->
@@ -62,7 +67,7 @@ function getTitle(number) {
 <summary>{{ getTitle(3) }}</summary>
 <!-- ::: details {{ getTitle(3) }} -->
 
-我们主要讨论现代代数（抽象代数），理解从群环域的理论到ZKP常用的密码学基础构件。
+我们主要讨论抽象代数，理解从群环域的理论到ZKP常用的密码学基础构件。
 
 </details>
 <!-- ::: -->
@@ -72,8 +77,9 @@ function getTitle(number) {
 <summary>{{ getTitle(4) }}</summary>
 <!-- ::: details {{ getTitle(4) }} -->
 
-本节课将会讨论实用的 zkSNARK 电路工程方法：使用 halo2 证明系统构建简单的零知识证明。我们将讨论 Plonkish 编程模型（和成本模型）和简单的电路组件，例如位运算符、范围检查等。
+本节课将会讨论实用的 zkSNARK 电路工程方法：使用 halo2 证明系统构建简单的零知识证明。我们将讨论 Plonkish 编程模型和简单的电路组件，例如位运算符、范围检查等。
 
+- [练习](./notes/exercise4)
 - 参考课程： https://learn.0xparc.org/halo2/
 
 </details>
@@ -86,6 +92,8 @@ function getTitle(number) {
 
 我们将讨论一些初级的ZKP原语，从汉密尔顿回路开始，包含二次剩余问题，Schnorr协议，Pedersen承诺，再到KZG承诺。
 
+- 参考课程： [https://zkshanghai.xyz/](../syllabus.md)
+
 </details>
 <!-- ::: -->
 
@@ -96,6 +104,7 @@ function getTitle(number) {
 
 我们将构造一个相对复杂的证明系统，以 STARK 为例，从零构建一个可证明的二次斐波那契数列电路。
 
+- [练习](./notes/exercise6)
 - 参考课程： https://starkware.co/stark-101/
 
 </details>
@@ -117,6 +126,8 @@ function getTitle(number) {
 <!-- ::: details {{ getTitle(8) }} -->
 
 我们将接着上节课，利用 Plonky2 框架来实践一种实用的递归证明方法。
+
+- [练习](./notes/exercise8)
 
 </details>
 <!-- ::: -->
