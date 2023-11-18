@@ -1,13 +1,21 @@
 ---
 dates:
-  - date: 11月25日周六
-  - date: 11月25日周六
-  - date: 12月2日周六
-  - date: 12月2日周六
-  - date: 12月9日周六
-  - date: 12月9日周六
-  - date: 12月16日周六
-  - date: 12月16日周六
+  # - date: 11月25日周六
+  # - date: 11月25日周六
+  # - date: 12月2日周六
+  # - date: 12月2日周六
+  # - date: 12月9日周六
+  # - date: 12月9日周六
+  # - date: 12月16日周六
+  # - date: 12月16日周六
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
+  - date: 时间未定
 lessons:
   - name: 现代 ZKP 漫谈
   - name: 算术电路技术栈
@@ -36,7 +44,7 @@ function getTitle(number) {
 # 课程表  
 
 ::: warning 注意
-课程时间为暂定
+课程时间暂未确定
 :::
 
 <details class="details custom-block" open="">
