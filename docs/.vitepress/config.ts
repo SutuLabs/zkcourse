@@ -19,23 +19,23 @@ const customElements = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "ZK Shanghai 2023",
-  description: "A course site for ZK Shanghai 2023",
+  title: "ZK Shanghai",
+  description: "A course site for ZK Shanghai",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '春季工作坊', link: '/information' },
-      { text: '冬季工作坊', link: '/23winter/information' },
+      { text: '23春季工作坊', link: '/information' },
+      { text: '24秋季工作坊', link: '/24fall/information' },
     ],
 
     sidebar: [
       {
-        text: '2023 冬季工作坊',
+        text: '2024 秋季工作坊',
         items: [
-          { text: '基本信息', link: '/23winter/information' },
-          { text: '课程表', link: '/23winter/syllabus' },
-          { text: '引用材料', link: '/23winter/reference' },
+          { text: '基本信息', link: '/24fall/information' },
+          { text: '课程表', link: '/24fall/syllabus' },
+          { text: '引用材料', link: '/24fall/reference' },
         ]
       },
       {
