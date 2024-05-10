@@ -25,11 +25,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '23春季工作坊', link: '/information' },
-      { text: '24秋季工作坊', link: '/24fall/information' },
+      { text: '23春工作坊', link: '/information' },
+      { text: '24秋工作坊', link: '/24fall/information' },
+      { text: 'zkWeekly', link: '/zkweekly/2024/q2' },
     ],
 
     sidebar: [
+      {
+        text: 'zkWeekly',
+        items: [
+          { text: '2024-Q2', link: '/zkweekly/2024/q2' },
+        ]
+      },
       {
         text: '2024 秋季工作坊',
         items: [

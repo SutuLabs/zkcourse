@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 2024 秋季课程
       link: /24fall/syllabus
+    - theme: brand
+      text: zkWeekly
+      link: /zkweekly/2024/q2
     # - theme: alt
     #   text: 报名
     #   link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g
