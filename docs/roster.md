@@ -21,9 +21,9 @@ const link = pattern ? pattern.replace(":path", "data/member.data.ts") : undefin
 
 <table>
   <tr>
-    <th>称呼</th>
-    <th>职业</th>
-    <th>介绍</th>
+    <th>越泽</th>
+    <th>区块链开发</th>
+    <th>熟悉智能合约和后端开发，希望通过课程能开发隐私nft交易和zk猜拳游戏</th>
   </tr>
   <tr v-for="m in members">
     <td>{{ shorten(m.name) }}</td>
