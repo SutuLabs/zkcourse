@@ -18,7 +18,7 @@ $$
 
 其中 $c_i \in \mathbb{F}_q$ 是轮常数，且 $c_0 = 0$。轮常数在 MiMC 的实例化时被选择为 $\mathbb{F}_q$ 的随机元素，然后被固定。注意，这里没有轮密钥，相反，每轮和最后一次都使用相同的密钥。所有的操作都在基础域 $\mathbb{F}_q$ 中定义。
 
-<img src="mimc.png" width="700">
+<img src="./mimc.png" width="700">
 
 对于一个 $2n$ 位的密钥，$(K_0, K_1) \in \mathbb{F}_q^2$ 被均匀随机选择。在这种情况下，两个密钥 $K_0$ 和 $K_1$ 在轮次中交替添加。因此，第 $i$ 轮的密钥调度定义为 $k_i = K_{i \pmod 2}$，轮函数定义为
 
@@ -59,7 +59,7 @@ $$
 where $c_i \in \mathbb{F}_q$ are the round constants and $c_0 = 0$. The round constants are chosen as random elements of $\mathbb{F}_q$ at the instantiation of MiMC and then fixed. Note that there are no round keys, instead the same key is used in each round and once at the end. All the operations are defined in the underlying field $\mathbb{F}_q$.
 
 
-<img src="mimc.png" width="700">
+<img src="./mimc.png" width="700">
 
 For a $2n$-bit key, $(K_0, K_1) \in \mathbb{F}_q^2$ is chosen uniformly randomly. In this case the two keys $K_0$ and $K_1$ are added alternately through the rounds. Hence, the key scheduling for round $i$ is defined as $k_i = K_{i \pmod 2}$, and the round function is defined as 
 
