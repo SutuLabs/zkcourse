@@ -86,6 +86,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Hackathon', link: '/other/hackathon' },
+          { text: '学习资源', link: '/other/resource' },
         ]
       }
     ],
