@@ -15,6 +15,7 @@
 - https://learn.0xparc.org/
 - https://zkiap.com/
 - https://zk-learning.org/
+- https://zkhack.dev/whiteboard/
 - https://github.com/Quillhash/Zero-Knowledge-Mastery
 - https://github.com/barryWhiteHat/plonk_tutorial
 - https://github.com/weijiekoh/libkzg
