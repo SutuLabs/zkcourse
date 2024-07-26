@@ -27,6 +27,7 @@ component main { public [ b0, b1, b2, b3 ] } = Example();
     "b2": "0",
     "b3": "1"
 } */
+
 ```
 
 <div style="page-break-after: always;"></div>
@@ -65,7 +66,6 @@ component main { public [ b0, b1, b2, b3 ] } = Example();
 -    "b3": "1"
 +    "b": ["1", "1", "0", "1"]
  } */
-\ No newline at end of file
 ```
 
 <div style="page-break-after: always;"></div>
@@ -131,20 +131,19 @@ component main { public [ b0, b1, b2, b3 ] } = Example();
 +template Main () {
 +    signal input in;
 +    signal output out;
-+
+ 
 +    component n2b = Num2Bits(4);
 +    n2b.in <== in;
 +    out <== n2b.b[0];
 +}
 +
 +component main = Main();
- 
++
  /* INPUT = {
 -    "in": "11",
 -    "b": ["1", "1", "0", "1"]
 +    "in": "11"
  } */
-\ No newline at end of file
 ```
 
 <div style="page-break-after: always;"></div>
@@ -172,4 +171,21 @@ component main { public [ b0, b1, b2, b3 ] } = Example();
  }
  
  template Main () {
+```
+
+<div style="page-break-after: always;"></div>
+
+```diff
+@@ -18,9 +18,8 @@
+     signal input in;
+     signal output out;
+ 
+-    component n2b = Num2Bits(4);
+-    n2b.in <== in;
+-    out <== n2b.b[0];
++    signal allBits[4] <== Num2Bits(4)(in);
++    out <== allBits[0];
+ }
+ 
+ component main = Main();
 ```

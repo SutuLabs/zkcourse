@@ -1,0 +1,6 @@
+{
+    "[circom]": {
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true
+    },
+}
