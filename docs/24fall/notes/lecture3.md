@@ -159,3 +159,7 @@ $$
 - **周期性**：如果 $G$ 是一个有限群，生成元 $g$ 的周期是 $n$，则 $g^n = e$。
 - **子群**：循环群的所有子群也是循环的，并且每个子群的阶是原群阶的约数。
 
+
+![](assets/AbstractAlgebra.drawio.svg)
+
+[下载PDF版](assets/AbstractAlgebra.drawio.pdf)

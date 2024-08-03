@@ -1,0 +1,154 @@
+<mxfile host="Electron" modified="2024-07-29T15:49:04.700Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="extMgEJGN2a7U5LWtt--" version="24.1.0" type="device">
+  <diagram name="Page-1" id="jNfZf6ToaZxgnNeXhYta">
+    <mxGraphModel dx="733" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nRdou3GsqSL2pl9xu54x-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-10" target="nRdou3GsqSL2pl9xu54x-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="230" />
+              <mxPoint x="640" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-10" target="nRdou3GsqSL2pl9xu54x-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="230" />
+              <mxPoint x="320" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-10" target="nRdou3GsqSL2pl9xu54x-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-10" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-1" target="nRdou3GsqSL2pl9xu54x-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-1" target="nRdou3GsqSL2pl9xu54x-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-1" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;代数结构 \( \langle S, \Phi \rangle \)&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;载体集&amp;nbsp; &amp;nbsp; &amp;nbsp;\( S \)&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;运算集&amp;nbsp; &amp;nbsp; &amp;nbsp;\( \Phi = \{f_1, \ldots, f_n\} \)&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;运算符&amp;nbsp; &amp;nbsp; &amp;nbsp;\( f_i : S^m \rightarrow S \)&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;元数&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\( m \in \mathbb{N}_0 \)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fontSize=12;spacing=10;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="290" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-2" target="nRdou3GsqSL2pl9xu54x-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-2" value="原群&lt;div&gt;Magma&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-3" target="nRdou3GsqSL2pl9xu54x-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-3" target="nRdou3GsqSL2pl9xu54x-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="170" />
+              <mxPoint x="320" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-3" value="半群&lt;div&gt;Semigroup&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-4" target="nRdou3GsqSL2pl9xu54x-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-4" target="nRdou3GsqSL2pl9xu54x-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-4" value="幺半群&lt;div&gt;Monoid&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-5" target="nRdou3GsqSL2pl9xu54x-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="170" />
+              <mxPoint x="640" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-5" value="群&lt;div&gt;Group&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-6" value="交换律 (Commutativity)&lt;div&gt;&amp;nbsp;\( x \circ y = y \circ x \)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="405" y="180" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-7" value="&lt;div&gt;单位元 (Identity)&lt;/div&gt;&lt;div&gt;\( e \circ x = x \circ e = x \)&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-8" value="&lt;div&gt;&lt;div&gt;逆元 (Inverse)&lt;/div&gt;&lt;div&gt;\(x \circ x^{-1} = x^{-1} \circ x = e \)&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="70" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-9" value="&lt;div&gt;&lt;div&gt;结合律 (Associativity)&lt;/div&gt;&lt;div&gt;\( (x \circ y) \circ z = x \circ (y \circ z) \)&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-11" value="交换半群&lt;div&gt;Commutative Semigroup&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="250" y="240" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-12" value="交换幺半群&lt;div&gt;Commutative Monoid&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="410" y="240" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-13" value="交换群（阿贝尔群）&lt;div&gt;Abelian Group&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="570" y="240" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-14" value="&lt;div&gt;\( \langle S, \{ \circ \} \rangle \) （二元运算）&lt;/div&gt;&lt;div&gt;\( \circ: S \times S \to S \) （封闭性）&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="165" y="290" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-15" value="&lt;div&gt;&lt;div&gt;1. 交换幺半群 \( \langle S, \oplus \rangle \)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 加法单位元 \( 0 \in S \)&lt;/div&gt;&lt;div&gt;2. 幺半群 \( \langle S, \odot \rangle \)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 乘法单位元 \( 1 \in S \)&lt;/div&gt;&lt;div&gt;3. 分配律&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; \( x \odot (y \oplus z) = (x \odot y) \oplus (x \odot z) \)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; \( (y \oplus z) \odot x = (y \odot x) \oplus (z \odot x) \)&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="350" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-16" value="&lt;div&gt;\( \langle S, \{ \oplus, \odot \} \rangle \)&amp;nbsp;&lt;/div&gt;&lt;div&gt;\( \oplus: S \times S \to S \)&amp;nbsp;&lt;/div&gt;&lt;div&gt;\( \odot: S \times S \to S \)&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="347" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-17" target="nRdou3GsqSL2pl9xu54x-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-17" value="半环&lt;div&gt;Semiring&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="120" y="490" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-18" target="nRdou3GsqSL2pl9xu54x-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-18" value="环&lt;div&gt;Ring&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="240" y="490" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-19" target="nRdou3GsqSL2pl9xu54x-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-19" value="交换环&lt;div&gt;Commutative Ring&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="360" y="490" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nRdou3GsqSL2pl9xu54x-20" target="nRdou3GsqSL2pl9xu54x-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-20" value="整域&lt;div&gt;Integral Domain&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-21" value="域&lt;div&gt;Field&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="660" y="490" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-22" value="&lt;div&gt;交换群&lt;/div&gt;&lt;div&gt;\( \langle S, \{ \oplus \} \rangle \)&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="125" y="530" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-23" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;交换幺半群&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;\( \langle S, \{ \odot \} \rangle \)&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="244" y="530" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-24" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;无零因子&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;\( \forall x, y \in S \setminus \{0\} : xy \neq 0 \)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="370" y="530" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nRdou3GsqSL2pl9xu54x-25" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;交换群&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;\( \langle S, \{ \odot \} \rangle \)&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="545" y="530" width="190" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
