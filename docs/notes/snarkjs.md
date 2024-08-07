@@ -31,7 +31,6 @@ This diagram is essential as you start working with the many artifacts generated
 ### _(预备)_ 安装代码
 
 - 首先，根据<https://github.com/iden3/snarkjs#preliminaries>安装`snarkjs`和`circom`
-- 如果您对此有任何困难，请联系不和谐
 
 ### _(步骤 0 - 8)_ **下载预计算 Tau**
 
@@ -40,7 +39,7 @@ This diagram is essential as you start working with the many artifacts generated
 - 你可以跳过自己设置这些； Polygon Hermez 已经完成了生成它们的仪式
     - 以太坊目前正在 <https://ceremony.ethereum.org/> 举办一个更大的仪式！
 
-- 也可以**简单下载一个**预计算的 tau ，链接： <https://github.com/iden3/snarkjs#7-prepare-phase-2>，其中 tau 的幂次越高，电路中包含的约束越多
+- 也可以**简单下载一个**预计算的 tau ，链接： <https://github.com/iden3/snarkjs#7-prepare-phase-2>，其中 tau 的幂次越高，电路中可包含的约束越多
 
 ### _(步骤 9 - 13)_ **电路编写+编译**
 
@@ -59,17 +58,17 @@ circuit_js$ node generate_witness.js circuit.wasm ../input.json ../witness.wtns
 
 ### _(步骤 15 - 21)_ **计算证明key/可信设置阶段 2**
 
-- 在这里，我们生成相关元数据以在 .zkey 文件中创建证明，称为 **证明key**
+- 在这里，我们生成相关元数据以在 .zkey 文件中创建证明，称为 **proving key**
 
 - 这需要一个“可信设置”，它在几个步骤中输入随机性以创建一个安全的证明密钥
      - 这通常会在许多方之间完成，只要他们不全部一起串通就是安全的
 
 - 你应该添加一些你自己的熵，如 <https://github.com/iden3/snarkjs#16-contribute-to-the-phase-2-ceremony>
 
-### _(步骤  22, 25\-26)_ **计算验证key**
+### _(步骤  22, 25 - 26)_ **计算验证key**
 
-- 在这里，我们计算相关元数据以在 `.vkey.json` 文件中验证证明，称为 **验证key**
-- 也可以制作智能合约版本进行链上验证！
+- 在这里，我们计算相关元数据以在 `.vkey.json` 文件中验证证明，称为 **verifying key**
+- 也可以制作智能合约版本进行链上验证
 
 ### _(步骤 23 - 24)_ **创建和验证证明**
 
