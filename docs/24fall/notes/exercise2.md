@@ -1,6 +1,6 @@
 # 第 2 课 练习
 
-[Mina CTF](https://minactf.xyz/) 是一个学习 Mina 使用方法的很好的网站，里面涵盖了 ZKP 的各种基础功能，以下练习基于该项目给出。
+[Mina CTF](https://minactf.com/) 是一个学习 Mina 使用方法的很好的网站，里面涵盖了 ZKP 的各种基础功能，以下练习基于该项目给出。
 
 ## Check in
 
