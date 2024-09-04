@@ -7,7 +7,7 @@ set -e
 if ! [ -n "$input" ]; then
     input=$1
 fi
-output="output.md"
+output="markdown.md"
 
 pandoc "$input" -o "$output"
 
