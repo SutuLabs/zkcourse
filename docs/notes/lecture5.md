@@ -316,7 +316,7 @@ $$
 
 :::
 
-在这个讲座中，我们将使用简写表示法 $[x]_{1}:=[x] G_{1},[x]_{2}:=[x] G_{2}$ 表示任何 $x \in \mathbb{F}_{p}$。
+在本讲中，我们将使用简写符号 $[x]_{1}:=[x] G_{1},[x]_{2}:=[x] G_{2}$，其中 $x \in \mathbb{F}_{p}$。
 
 - KZG.Setup $\left(1^{\lambda}, d\right) \rightarrow srs$: 设置 $srs =(\mathrm{ck}, \mathrm{vk})=\left(\left\{\left[\alpha^{i}\right]_{1}\right\}_{i=0}^{d-1},[\alpha]_{2}\right)$ . $\alpha$ 是一个秘密元素，必须在 Setup 后丢弃。
 
