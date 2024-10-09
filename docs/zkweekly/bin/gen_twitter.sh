@@ -2,7 +2,7 @@
 
 set -e
 
-input=../2024/q3.md
+input=../2024/q4.md
 output="twitter.md"
 
 sedi=(-i) && [ "$(uname)" == "Darwin" ] && sedi=(-i '')

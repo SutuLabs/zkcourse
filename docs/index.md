@@ -15,7 +15,7 @@ hero:
       link: /24fall/syllabus
     - theme: brand
       text: zkWeekly
-      link: /zkweekly/2024/q3
+      link: /zkweekly/2024/q4
     # - theme: alt
     #   text: 报名
     #   link: https://mp.weixin.qq.com/s/fjdXK18-6AJe6BqXq7uA2g

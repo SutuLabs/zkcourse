@@ -27,13 +27,14 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '23春工作坊', link: '/information' },
       { text: '24秋工作坊', link: '/24fall/information' },
-      { text: 'zkWeekly', link: '/zkweekly/2024/q3' },
+      { text: 'zkWeekly', link: '/zkweekly/2024/q4' },
     ],
 
     sidebar: [
       {
         text: 'zkWeekly',
         items: [
+          { text: '2024-Q4', link: '/zkweekly/2024/q4' },
           { text: '2024-Q3', link: '/zkweekly/2024/q3' },
           { text: '2024-Q2', link: '/zkweekly/2024/q2' },
         ]
